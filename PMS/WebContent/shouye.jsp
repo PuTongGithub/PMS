@@ -99,7 +99,7 @@
 						</dd>
 					</dl>
 				</li>
-				
+				</ul>
 		</nav>
 		<footer class="side-footer">© 西电通院第五项目组 版权所有</footer>
 	</div>
@@ -153,7 +153,7 @@
 								<div class="panel panel-default">
 									<div class="panel-bd">
 										<p class="title-description">
-						前端部分：马天阳，殷立，杨志</br>
+						前端部分：马天阳，殷立，杨志<br>
 						
 						</p>	
 									</div>

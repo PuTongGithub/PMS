@@ -15,12 +15,12 @@
 
 <div class="b2">
 <h1>人事管理系统</h1>
+<form action="background/LoginProcessing.jsp" id="login_form">
 <div class="b1">
-<form action="index.jsp" >
-用户名&nbsp;<input type="text" class="user" placeholder="用户名" id="user" >
+用户名&nbsp;<input type="text" class="user" placeholder="用户名" id="username" name="username">
 </div>
 <div class="b1">
-密码	&nbsp;&nbsp;&nbsp;<input type="password" placeholder="密码"class="pass" id="pass">
+密码	&nbsp;&nbsp;&nbsp;<input type="password" placeholder="密码"class="pass" id="password" name="password">
 </div>
 </form>
 <div class=box2>
@@ -44,7 +44,7 @@
 			alert("用户名或者密码不能为空");
 			return false;
 		}
-		
+		login_form.submit();
 	});
 
 </script>
