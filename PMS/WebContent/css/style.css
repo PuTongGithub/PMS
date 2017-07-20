@@ -2158,3 +2158,43 @@ textarea:focus {
 .field-title.dashed {
   border-top-style: dashed;
 }
+.input1{
+  width: 200px;
+  
+  border:2px solid #d7dde4;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 100px;
+}
+.input2{
+  width: 300px;
+  border:2px solid #d7dde4;
+  height: 35px;
+   
+  margin-top: 20px;
+  
+}
+
+.box1{
+  width:240px;
+  margin: 20px;
+ }
+.box2{
+  width: 320px;
+  margin: 20px;
+}
+
+.box3{
+  position: absolute;
+  right: 10px;
+  top:470px;
+  
+}
+
+.left{
+  float: left;
+
+}
+.right{
+  float:right;
+}

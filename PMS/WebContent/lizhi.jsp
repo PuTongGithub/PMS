@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -54,7 +54,22 @@
 						</dd>
 					</dl>
 				</li>
-				
+				<li>
+					<dl>
+						<dt>
+							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
+						</dt>
+						<dd>
+							<a href="table.html">新招聘员工报表</a>
+						</dd>
+						<dd>
+							<a href="table.html">离职员工报表</a>
+						</dd>
+						<dd>
+							<a href="table.html">调动员工报表</a>
+						</dd>
+					</dl>
+				</li>
 				<li>
 					<dl>
 						<dt>
@@ -77,23 +92,7 @@
 						</dd>
 					</dl>
 				</li>
-				<li>
-					<dl>
-						<dt>
-							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
-						</dt>
-						<dd>
-							<a href="table.html">新招聘员工报表</a>
-						</dd>
-						<dd>
-							<a href="table.html">离职员工报表</a>
-						</dd>
-						<dd>
-							<a href="table.html">调动员工报表</a>
-						</dd>
-					</dl>
-				</li>
-				</ul>
+				
 		</nav>
 		<footer class="side-footer">© 西电通院第五项目组 版权所有</footer>
 	</div>
@@ -121,91 +120,66 @@
 				</ul>
 			</div>
 		</header>
-		<main class="main-cont content mCustomScrollbar">
-		<div class="page-wrap">
-				<!--开始::内容-->
-				<section class="page-hd">
-					<header>
-						<h1 class="title">EHR企业级人事管理系统</h1>
-						<p class="title-description">
-							该系统基于JAVA-WEB技术，主要用于实现企业里的人事管理，主要功能如下：</br>
-						        企业结构管理：部门管理与岗位管理</br>
-						        人员管理：入职管理，试用期管理，调动管理，离职管理，人员信息管理</br>
-						        报表管理：新招聘员工报表， 离职员工报表，调动员工报表</br>
-						</p>
-					</header>
-					<hr>
-				</section>
-				
-				<div class="page-wrap" style="margin-top:50px;" >
-					<blockquote class="blockquote mb-20">
-						<h1>项目组人员简介</h1>
-						
-					</blockquote>
-					<div class="flow-layout col-2">
-						<ul>
-							<li class="child-wrap">
-								<div class="panel panel-default">
-									<div class="panel-bd">
-										<p class="title-description">
-						前端部分：马天阳，殷立，杨志<br>
-						
-						</p>	
-									</div>
-								</div>
-							</li>
-							<li class="child-wrap">
-								<div class="panel panel-default">
-									<div class="panel-bd">
-										<p class="title-description">
-						
-						测试部分：安南</br>
-						</p>	
-									</div>
-								</div>
-							</li>
-							<li class="child-wrap">
-								<div class="panel panel-default">
-									<div class="panel-bd">
-										<p class="title-description">
-						
-						后端部分：普通，刘辉</br>
-						
-						</p>	
-									</div>
-									
-								</div>
-							</li>
-							<li class="child-wrap">
-								<div class="panel panel-default">
-									<div class="panel-bd">
-										<p class="title-description">
-						
-						联系邮箱：a852358870@vip.qq.com</br>
-						联系电话：15009264160</br>
-						</br>
-						西安电子科技大学通信工程学院</br>
-					
-						</p>	
-									</div>
-								</div>
-							</li>
-							<li class="child-wrap">
-								<div class="panel panel-default">
-									<div class="panel-bd">
-									<p class="title-description">
-						大吉大利，今晚吃鸡！
-						</p>	
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
+		<main class="main-cont content mCustomScrollbar " style="background:white">
+		<div class="breadcrumb">
+					<ul>
+						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
+						<li><a href="#" style="color:blue;">离职管理</a></li>
+					</ul>	
 				</div>
-				<!--开始::结束-->
-			</div>
-			
-			</main>
+		 <div style="border:2px solid #d7dde4; height: 400px; width: 100%; margin-top:70px;">
+         <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+         离职查询
+         </div>
+         <div class="box1 left">
+         <p style="font-weight: 700; font-size:15px">部门名称:</p>
+         <input type="text" class="input1">
+         </div>
+         <div class="box1 left">
+         <p style="font-weight: 700; font-size:15px">岗位名称:</p>
+         <input type="text" class="input1">
+
+         </div>
+         <div class="box1 left">
+         <p  style="font-weight: 700; font-size:15px">员工编号:</p>
+         <input type="text" class="input1">
+
+         </div>
+         <div class="box1 left">
+         <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
+         <input type="text" class="input1">
+         </div>
+
+         <div class="box2 left">
+         <p  style="font-weight: 700; font-size:15px">开始时间:</p>
+         <input type="date" class="input2">
+
+         </div>
+         <div class="box2 left">
+         <p  style="font-weight: 700; font-size:15px">结束时间:</p>
+         <input type="date"  class="input2">
+		</div>
+   		 <div class="box2 left " style="margin-top:40px;">
+   		 <p  style="font-weight: 700; font-size:15px; ">离职原因:</p>
+   		 <select name="" id="">
+   		 <option value="辞职">辞职</option>
+   		 <option value="公司开除">公司开除</option>
+   		 </select>
+   		 
+   		 </div>
+
+
+
+          <div class="box3 right">
+         <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
+         </div> 
+		
+
+		</div>
+		</main>
+		<button type="button" class="btn btn-default btn-sm">
+          <span class="icon-search"></span> Search
+        </button>
 			<!--开始::内容-->
 			
 			
