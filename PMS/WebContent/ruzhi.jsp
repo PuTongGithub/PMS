@@ -64,7 +64,7 @@
 							<a href="ruzhi.jsp">入职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">试用期管理</a>
+							<a href="shiyongqi.jsp">试用期管理</a>
 						</dd>
 						<dd>
 							<a href="form.html">调动管理</a>
@@ -73,7 +73,7 @@
 							<a href="lizhi.jsp">离职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">人员信息管理</a>
+							<a href="yuangongxinxi.jsp">人员信息管理</a>
 						</dd>
 					</dl>
 				</li>
@@ -97,7 +97,7 @@
 				
 		</nav>
 		
-		<footer class="side-footer">© GeneralDarknor 版权所有</footer>
+		<footer class="side-footer">© 西电通院第五项目组 版权所有</footer>
 		
 	</div>
 	<div class="content-wrap">
@@ -140,7 +140,7 @@
 						<hr>
 					</section>
 				</div>	
-					
+				<form action="">	
 				<div class="form-group-col-2" style="float:left;">
 					<!-- 员工姓名 -->
 					<br>	
@@ -242,7 +242,7 @@
 								</select>
 							</div>	
 						</div>
-					
+					</form>
 				</div>
 				
 				

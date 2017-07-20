@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -121,69 +121,175 @@
 				</ul>
 			</div>
 		</header>
-		<main class="main-cont content mCustomScrollbar " style="background:white">
-		<div class="breadcrumb">
-					<ul>
-						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
-						<li><a href="#" style="color:blue;">离职管理</a></li>
-					</ul>	
-				</div>
-		 <div style="border:2px solid #d7dde4; height: 400px; width: 100%; margin-top:70px;">
-         <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
-         离职查询
-         </div>
-         <form action="">
-         <div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">部门名称:</p>
-         <input type="text" class="input1">
-         </div>
-         <div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">岗位名称:</p>
-         <input type="text" class="input1">
+		<main class="main-cont content mCustomScrollbar">
+		<div class="page-wrap">
+					<section class="page-hd">
+						<header>
+							<h4 class="title">查询条件</h4>
+						</header>
+						<hr>
+					</section>
+			<form>			
+				<div class="form-group-col-2">
 
-         </div>
-         <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工编号:</p>
-         <input type="text" class="input1">
+					<div class="form-group-col-2">
 
-         </div>
-         <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
-         <input type="text" class="input1">
-         </div>
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label">姓名：</p>
+							<br>
+							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 60px; width:200px" />
+						</div>
 
-         <div class="box2 left">
-         <p  style="font-weight: 700; font-size:15px">开始时间:</p>
-         <input type="date" class="input2">
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label">编号：</p>
+							<br>
+							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 60px; width:200px" />
+						</div>
 
-         </div>
-         <div class="box2 left">
-         <p  style="font-weight: 700; font-size:15px">结束时间:</p>
-         <input type="date"  class="input2">
-		</div>
-   		 <div class="box2 left " style="margin-top:40px;">
-   		 <p  style="font-weight: 700; font-size:15px; ">离职原因:</p>
-   		 <select name="" id="">
-   		 <option value="辞职">辞职</option>
-   		 <option value="公司开除">公司开除</option>
-   		 
-   		  <option value="公司开除">其他</option>
-   		 </select>
-   		 
-   		 </div>
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label">部门:</p>
+							<br>
+							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
+									<option>请选择</option>
+									<option>技术部</option>
+									<option>销售部</option>
+									<option>后勤部</option>
+									<option>人事部</option>
+								</select> -->
+						</div>			
 
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label">岗位:</p>
+							<br>
+							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
+									<option>请选择</option>
+									<option>秘书</option>
+									<option>员工</option>
+									<option>经理</option>
+								</select> -->
+						</div>
 
+					</div>
 
-          <div class="box3 right">
-         <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
-         </div> 
-		</form>
+					<div class="form-group-col-2">
 
-		</div>
-		</main>
-		<button type="button" class="btn btn-default btn-sm">
-          <span class="icon-search"></span> Search
-        </button>
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label" style="width:190px">试用期开始时间：</p>
+							<br>
+							<div class="form-cont" style="margin:0px 0px 0px 60px; width:200px">
+								<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
+								<!-- <p>示例：2016/04/07</p> -->
+							</div>
+						</div>
+
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label" style="width:190px">试用期结束时间：</p>
+							<br>
+							<div class="form-cont" style="margin:0px 0px 0px 60px; width:200px">
+							<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
+								<!-- <p>示例：2016/04/07</p> -->
+							</div>
+						</div>
+
+						<div class="form-group-col-2" style="float:left;">
+							<p class="form-label" style="width:165px">试用期状态:</p>
+							<br>
+							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
+									<option>请选择</option>
+									<option>使用中</option>
+									<option>未通过</option>
+									<option>已录用</option>
+								</select> -->
+						</div>
+
+						<div class="form-group-col-2">	
+							<br>
+							<div style="margin:10px 0px 0px 770px">
+							<input type="submit" class="btn btn-primary" value="提交" style="display: block;"/>
+						</div>
+		
+
+					</div>	
+
+				</div>	
+			</form>		
+			
+			<hr>	
+
+			</div>
+			<div class="page-wrap">
+				<!--开始::内容-->
+				<section class="page-hd">
+					<header>
+						<h4 class="title">查询结果</h4>
+					</header>
+					<hr>
+				</section>
+
+				<table class="table table-bordered  mb-15">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>编号</th>
+							<th>部门</th>
+							<th>岗位</th>
+							<th>试用期开始时间</th>
+							<th>试用期结束时间</th>
+							<th>试用期状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="cen">
+							<td>赵一</td>
+							<td>1001</td>
+							<td>人事部</td>
+							<td>文员</td>
+							<td>正常</td>
+							<td>2016/03/01</td>
+							<td>2016/06/01</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+						<tr class="cen">
+							<td>钱二</td>
+							<td>1002</td>
+							<td>人事部</td>
+							<td>部长</td>
+							<td>正常</td>
+							<td>2016/03/01</td>
+							<td>2016/06/01</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+						<tr class="cen">
+							<td>张三</td>
+							<td>1003</td>
+							<td>财务部</td>
+							<td>文员</td>
+							<td>正常</td>
+							<td>2016/03/01</td>
+							<td>2016/06/01</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+				
+				<!--开始::结束-->
+			</div>
+			
+			</main>
 			<!--开始::内容-->
 			
 			

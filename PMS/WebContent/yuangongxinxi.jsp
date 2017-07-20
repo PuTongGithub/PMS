@@ -73,7 +73,7 @@
 							<a href="lizhi.jsp">离职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">人员信息管理</a>
+							<a href="yuangongxinxi.jsp">人员信息管理</a>
 						</dd>
 					</dl>
 				</li>
@@ -97,7 +97,7 @@
 				
 		</nav>
 		
-		<footer class="side-footer">© GeneralDarknor 版权所有</footer>
+		<footer class="side-footer">© 第五项目组 版权所有</footer>
 		
 	</div>
 	<div class="content-wrap">
@@ -124,135 +124,96 @@
 		<div class="breadcrumb">
 					<ul>
 						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
-						<li><a href="#" style="color:blue;">入职管理</a></li>
+						<li><a href="#" style="color:blue;">员工信息查询</a></li>
 					</ul>	
 				</div>
-			<div>
-				<div class="page-wrap">
-					<!--开始::内容-->
-					<section class="page-hd">
-						<header>
-							<h2 class="title">入职管理</h2>
-							<p class="title-description">
-								请输入个人信息
-							</p>
-						</header>
-						<hr>
-					</section>
-				</div>	
-					
-				<div class="form-group-col-2" style="float:left;">
-					<!-- 员工姓名 -->
-					<br>	
-					<div class="form-group-col-2">
-						<div class="form-label">*员工姓名：</div>
-						<div class="form-cont">
-							<input type="text" class="form-control form-boxed" style="">
-						</div>
-					</div>
-					<!-- 性别 -->
-					<div class="form-group-col-2">
-						<div class="form-label">*性别：</div>
-						<div class="form-cont">
-							<label class="radio">
-								<input type="radio" name="sex" checked="checked"/>
-								<span>男士</span>
-							</label>
-							<label class="radio">
-								<input type="radio" name="sex" />
-								<span>女士</span>
-						</div>
-					</div>
-					<!-- 员工编号 -->
-					<div class="form-group-col-2">
-						<div class="form-label">*员工编号：</div>
-						<div class="form-cont">
-							<input type="text" class="form-control form-boxed" style="">
-						</div>
-					</div>
-					<!-- 身份证件 -->
-					<div class="form-group-col-2">
-						<div class="form-label">*身份证件：</div>
-						<div class="form-cont">
-							<input type="text" class="form-control form-boxed" style="width:100%;">
-						</div>		
-					</div>
-					<!-- 出生日期 -->
-					<div class="form-group-col-2">
-						<div class="form-label">*出生日期：</div>
-						<div class="form-cont">
-							<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;">
-							<!-- <p>示例：2016/04/07</p> -->
-						</div>
-					</div>	
+			<div style="border:2px solid #d7dde4; height: 240px; width: 100%; margin-top:70px;">
+			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+    查询条件
+         </div>
+			<form action=""  >
+		<div class="box1 left">
+         <p style="font-weight: 700; font-size:15px">部门名称:</p>
+         <input type="text" class="input1">
+         </div>
+         <div class="box1 left">
+         <p style="font-weight: 700; font-size:15px">岗位名称:</p>
+         <input type="text" class="input1">
 
-				</div>
+         </div>
+         <div class="box1 left">
+         <p  style="font-weight: 700; font-size:15px">员工编号:</p>
+         <input type="text" class="input1">
 
-				<div class="page-wrap" style="float:left; margin-left:100px;">
-						<!--开始::结束-->
-						<div class="form-group-col-2">
-							<div class="form-label">*入职日期：</div>
-							<div class="form-cont">
-								<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;">
-								<!-- <p>示例：2016/04/07</p> -->
-							</div>
-						</div> 
-
-						<div class="form-group-col-2" style="margin-top: 20px;">
-							<div class="form-label">*工作日期：</div>
-							<div class="form-cont">
-								<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;">						
-								<!-- <p>示例：2016/04/07</p> -->
-							</div>
-						</div>
-						
-								<!-- 部门 -->
-						<div class="form-group-col-2" style="margin-top: 20px;">
-							<div class="form-label">*部门:</div>
-							<div class="form-cont">
-								<select style="width:auto;"请选择 placeholder="">
-									<option>请选择</option>
-									<option>技术部</option>
-									<option>销售部</option>
-									<option>后勤部</option>
-									<option>人事部</option>
-								</select>
-							</div>	
-						</div>
-
-						<div class="form-group-col-2" style="margin-top: 20px;">
-							<div class="form-label">*用工形式:</div>
-							<div class="form-cont">
-								<select style="width:auto;"placeholder="">
-									<option>请选择</option>
-									<option>临时员工</option>
-									<option>正式员工</option>
-								</select>
-							</div>	
-						</div>
-					
-						<div class="form-group-col-2" style="margin-top: 20px;">
-							<div class="form-label">*人员来源:</div>
-							<div class="form-cont">
-								<select style="width:auto;"placeholder="">
-									<option>请选择</option>
-									<option>员工举荐</option>
-									<option>社会招聘</option>
-									<option>校园招聘</option>
-								</select>
-							</div>	
-						</div>
-					
-				</div>
-				
-				
-			
+         </div>
+         <div class="box1 left">
+         <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
+         <input type="text" class="input1">
+         </div>
+           <div class="box3 right">
+         <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
+         </div> 
+         </form>
 			</div>
-			
-				<div style="width: 100px;height: 50px; position: absolute; top:500px; left:30%;">
-					<input type="submit" class="btn btn-primary" value="提交" style="display: block;"/>
-				</div>
-
+			<div style="border:2px solid #d7dde4; height: 500px; width: 100%; margin-top:50px;">
+			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+        	查询结果
+         </div>
+			<table class="table table-bordered table-striped table-hover " style="margin-top:15px;">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>姓名</th>
+							<th>岗位</th>
+							<th>部门</th>
+							<th>状态</th>
+							<th>联系方式</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="cen">
+							<td>#001</td>
+							<td >赵一</td>
+							<td>职员</td>
+							<td>人事部</td>
+							<td>在职</td>
+							<td>12245345523</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+						<tr class="cen">
+							<td>#002</td>
+							<td >钱二</td>
+							<td>经理</td>
+							<td>财务部</td>
+							<td>在职</td>
+							<td>246334232353</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+							
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+						<tr class="cen">
+							<td>#003</td>
+							<td >孙三</td>
+							<td>秘书</td>
+							<td>技术部</td>
+							<td>在职</td>
+							<td>23521234567</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</main>
 
 		<footer class="btm-ft">
