@@ -1,0 +1,91 @@
+body{
+	font-family: "微软雅黑";
+}
+
+h1{
+	margin-left:95px;
+	color: white;
+	font-family:"微软雅黑";
+	font-size:60px;
+	font-weight:700;
+	
+
+}
+.user{
+	margin-top:40px;
+	border-radius: 3px;
+	margin-bottom:6px;
+	box-shadow: rgba(1, 1 1, 1) 0px 0px 8px;
+    -moz-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;   
+    height: 50px;
+    line-height: 50px;
+    border:1px solid black;
+    background:#DFDFDF;
+	width:400px;
+	font-size:25px;
+	
+}
+.pass{
+	margin-top:40px;
+	border-radius: 3px;
+	margin-bottom:6px;
+	box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -moz-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;   
+	height: 50px;
+	font-size:25px;
+    line-height: 50px;
+    border:1px solid black;
+     background:#DFDFDF;
+     width:405px;
+
+}
+.b2{
+	color:white;
+	width: 600px;
+	height: 100%; 
+	margin:0 auto;
+	margin-top:200px;
+	font-size:25px;
+	
+}
+#bt1{
+	background: orange;
+	width: 350px;
+	height: 60px;
+	color:white;
+	font-family: "微软雅黑";
+	cursor: pointer;
+	border-radius: 6px;
+	box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -moz-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;   
+    border:1px solid black;
+    font-size:40px;
+    font-weight:100;
+    
+   
+
+
+
+}
+.box2{
+	margin-left:103px;
+	margin-top:60px;
+	
+}
+#bt2{
+	background: white;
+	margin-left: 120px;
+	width: 50px;
+	margin-top: 15px;
+	font-family: "微软雅黑";
+	cursor: pointer;
+	border-radius: 6px;
+	box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -moz-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(1, 1, 1, 1) 0px 0px 8px;   
+
+	
+}
