@@ -47,10 +47,10 @@
 							<i class="icon-inbox"></i>企业结构管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="button.html">部门管理</a>
+							<a href="bumenguanli.jsp">部门管理</a>
 						</dd>
 						<dd>
-							<a href="button.html">岗位管理</a>
+							<a href="gangwei.jsp">岗位管理</a>
 						</dd>
 					</dl>
 				</li>
@@ -66,9 +66,7 @@
 						<dd>
 							<a href="shiyongqi.jsp">试用期管理</a>
 						</dd>
-						<dd>
-							<a href="form.html">调动管理</a>
-						</dd>
+						
 						<dd>
 							<a href="lizhi.jsp">离职管理</a>
 						</dd>

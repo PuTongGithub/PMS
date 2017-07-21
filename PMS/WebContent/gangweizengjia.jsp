@@ -10,30 +10,38 @@
 <body>
 <body>
 <div style="border-bottom: 1px solid black;">
-<h1>&nbsp;&nbsp;员工调动</h1>
+<h1>&nbsp;&nbsp;岗位增加</h1>
 </div>
 <form>
-<div style="height:40px;margin-top:20px; ">
-<div class="left" style="margin-left:60px;">
-<p style="font-weight: 700">请输入调动员工编号：</p>
-</div>
-<div class="right "style="margin-right:60px;">
-<input type="text" class="input3" >
-</div>
-</div>
 
 <div style="margin-top: 30px;height:40px; ">	
 <div class="left" style="margin-left:60px;">
-<p style="font-weight: 700">部门更改为：</p>
+<p style="font-weight: 700">请输入新增岗位编号：</p>
 </div>
 <div class="right" style="margin-right:60px;">
 <input type="text" class="input3" >
 </div>
 </div>
 
+<div style="margin-top: 30px;height:60px;  ">	
+<div class="left" style="margin-left:60px;">
+<p style="font-weight: 700">请输入新增岗位名称：</p>
+</div>
+<div class="right" style="margin-right:60px;">
+<input type="text" class="input3">
+</div>
+</div>
+<div style="margin-top: 30px;height:60px;  ">	
+<div class="left" style="margin-left:60px;">
+<p style="font-weight: 700">请输入新增岗位类型：</p>
+</div>
+<div class="right" style="margin-right:60px;">
+<input type="text" class="input3">
+</div>
+</div>
 <div style="margin-top: 30px;height:60px; border-bottom:1px solid black; ">	
 <div class="left" style="margin-left:60px;">
-<p style="font-weight: 700">岗位更改为：</p>
+<p style="font-weight: 700">请输入新增岗位编制：</p>
 </div>
 <div class="right" style="margin-right:60px;">
 <input type="text" class="input3">
@@ -42,7 +50,7 @@
 </form>
 
   <div class="box3 right">
-         <button class="btn btn-info radius" ><i class="icon-refresh"></i>确认调动</button>
+         <button class="btn btn-info radius" ><i class="icon-olus"></i>确认增加 </button>
          </div> 
 
 </body>

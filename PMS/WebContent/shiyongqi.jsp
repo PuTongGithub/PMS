@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>EHR企业级人事管理系统</title>
+<title>试用期管理</title>
 <meta name="keywords"  content="设置关键词..." />
 <meta name="description" content="设置描述..." />
 <meta name="author" content="DeathGhost" />
@@ -47,10 +47,10 @@
 							<i class="icon-inbox"></i>企业结构管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="button.html">部门管理</a>
+							<a href="bumenguanli.jsp">部门管理</a>
 						</dd>
 						<dd>
-							<a href="button.html">岗位管理</a>
+							<a href="gangwei">岗位管理</a>
 						</dd>
 					</dl>
 				</li>
@@ -66,9 +66,7 @@
 						<dd>
 							<a href="shiyongqi.jsp">试用期管理</a>
 						</dd>
-						<dd>
-							<a href="form.html">调动管理</a>
-						</dd>
+						
 						<dd>
 							<a href="lizhi.jsp">离职管理</a>
 						</dd>
@@ -122,6 +120,12 @@
 			</div>
 		</header>
 		<main class="main-cont content mCustomScrollbar">
+		<div class="breadcrumb">
+					<ul>
+						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
+						<li><a href="#" style="color:blue;">试用期管理</a></li>
+					</ul>	
+				</div>
 		<div class="page-wrap">
 					<section class="page-hd">
 						<header>

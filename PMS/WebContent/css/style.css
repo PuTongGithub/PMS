@@ -1928,7 +1928,7 @@ dialog [class^="icon-"] {
   position: relative;
 }
 .input-group .form-control {
-  padding-right: 74px;
+  padding-right: 50px;
 }
 .input-group .btn {
   position: absolute;
@@ -2223,4 +2223,13 @@ box5{
   height: 30px;
    
   
+}
+
+.tijiao{
+	background:#76d4f5;
+	width:60px;
+	height:30px;
+	border:0;
+	color:white;
+	cursor:pointer;
 }

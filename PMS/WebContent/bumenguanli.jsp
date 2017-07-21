@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>GD人事管理系统</title>
+<title>部门管理</title>
 <meta name="keywords"  content="设置关键词..." />
 <meta name="description" content="设置描述..." />
 <meta name="author" content="DeathGhost" />
@@ -31,7 +31,7 @@
 					<i class="i-l-2"></i>
 					<i class="i-l-3"></i>
 				</span>
-				<strong>人事管理系统</strong>
+				<strong>人事管理系统导航</strong>
 			</div>
 		</div>
 		
@@ -47,10 +47,10 @@
 							<i class="icon-inbox"></i>企业结构管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="button.html">部门管理</a>
+							<a href="bumenguanli.jsp">部门管理</a>
 						</dd>
 						<dd>
-							<a href="button.html">岗位管理</a>
+							<a href="gangwei.jsp">岗位管理</a>
 						</dd>
 					</dl>
 				</li>
@@ -64,11 +64,9 @@
 							<a href="ruzhi.jsp">入职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">试用期管理</a>
+							<a href="shiyongqi.jsp">试用期管理</a>
 						</dd>
-						<dd>
-							<a href="form.html">调动管理</a>
-						</dd>
+					
 						<dd>
 							<a href="lizhi.jsp">离职管理</a>
 						</dd>
@@ -123,8 +121,8 @@
 		<main class="main-cont content mCustomScrollbar " style="background:white;">
 		<div class="breadcrumb">
 					<ul>
-						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
-						<li><a href="#" style="color:blue;">员工信息查询</a></li>
+						<li><i class="icon-inbox"></i><a href="#">企业结构管理</a><i class="icon-angle-right"></i></li>
+						<li><a href="#" style="color:blue;">部门管理</a></li>
 					</ul>	
 				</div>
 			<div style="border:2px solid #d7dde4; height: 240px; width: 100%; margin-top:70px;">
@@ -155,6 +153,12 @@
 			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
         	查询结果
          </div>
+          <div class=" left" style="margin:15px 5px 10px 5px">
+         <button id="a7" class="btn btn-info" style="background:#46a546"><i class="icon icon-plus"></i>增加</button>
+         </div> 
+          <div class=" right" style="margin:15px 5px 10px 5px">
+         <button id="a8" class="btn btn-danger" ><i class="icon icon-remove"></i>删除</button>
+         </div> 
 			<table class="table table-bordered table-striped table-hover " style="margin-top:15px;">
 					<thead>
 						<tr>
@@ -200,7 +204,7 @@
 							<td>秘书</td>
 							<td>技术部</td>
 							<td>在职</td>
-							<td><form><button></button> <input type="text" style="display:none ;"value="123"></form></td>
+							<td>1232131243455</td>
 							<td>
 								<a title="编辑" class="mr-5">编辑</a>
 								
@@ -231,22 +235,57 @@
 	</div>
 </div>
 
-<div class="mask"></div>
-<div class="dialog">
-	<div class="dialog-hd">
-		<strong class="lt-title">标题</strong>
-		<a class="rt-operate icon-remove JclosePanel" title="关闭"></a>
-	</div>
-	<div class="dialog-bd">
-		<!--start::-->
-		<p>这里是基础弹窗,可以定义文本信息，HTML信息这里是基础弹窗,可以定义文本信息，HTML信息。</p>
-		<!--end::-->
-	</div>
-	<div class="dialog-ft">
-		<button class="btn btn-info JyesBtn">确认</button>
-		<button class="btn btn-secondary JnoBtn">关闭</button>
-	</div>
-</div>
+
+<script>
+$('#a7').click(function(){
+	layer.open({
+	  type: 2,
+	  title: false,
+	  closeBtn: 0, //不显示关闭按钮
+	  shade: [0],
+	  area: ['340px', '215px'],
+	  offset: 'rb', //右下角弹出
+	  time: 1000, //2秒后自动关闭
+	  anim: 2,
+	  content: ['bumenzengjia.jsp', 'no'], //iframe的url，no代表不显示滚动条
+	  end: function(){ //此处用于演示
+	  layer.open({
+	      type: 2,
+	      title: '部门增加',
+	      shadeClose: true,
+	      shade: false,
+	      maxmin: true, //开启最大化最小化按钮
+	      area: ['400px', '600px'],
+	      content: 'bumenzengjia.jsp'
+	    });
+	  }
+	});
+	});	
+$('#a8').click(function(){
+	layer.open({
+	  type: 2,
+	  title: false,
+	  closeBtn: 0, //不显示关闭按钮
+	  shade: [0],
+	  area: ['340px', '215px'],
+	  offset: 'rb', //右下角弹出
+	  time: 1000, //2秒后自动关闭
+	  anim: 2,
+	  content: ['bumenshanchu.jsp', 'no'], //iframe的url，no代表不显示滚动条
+	  end: function(){ //此处用于演示
+	  layer.open({
+	      type: 2,
+	      title: '部门删除',
+	      shadeClose: true,
+	      shade: false,
+	      maxmin: true, //开启最大化最小化按钮
+	      area: ['420px', '270px'],
+	      content: 'bumenshanchu.jsp'
+	    });
+	  }
+	});
+	});	
+</script>
 </body>
 </html>
     

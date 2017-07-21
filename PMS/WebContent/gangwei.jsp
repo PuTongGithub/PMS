@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>员工信息管理</title>
+<title>岗位管理</title>
 <meta name="keywords"  content="设置关键词..." />
 <meta name="description" content="设置描述..." />
 <meta name="author" content="DeathGhost" />
@@ -31,7 +31,7 @@
 					<i class="i-l-2"></i>
 					<i class="i-l-3"></i>
 				</span>
-				<strong>人事管理系统</strong>
+				<strong>人事管理系统导航</strong>
 			</div>
 		</div>
 		
@@ -64,7 +64,7 @@
 							<a href="ruzhi.jsp">入职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">试用期管理</a>
+							<a href="shiyongqi.jsp">试用期管理</a>
 						</dd>
 					
 						<dd>
@@ -121,8 +121,8 @@
 		<main class="main-cont content mCustomScrollbar " style="background:white;">
 		<div class="breadcrumb">
 					<ul>
-						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
-						<li><a href="#" style="color:blue;">员工信息查询</a></li>
+						<li><i class="icon-inbox"></i><a href="#">企业结构管理</a><i class="icon-angle-right"></i></li>
+						<li><a href="#" style="color:blue;">岗位管理</a></li>
 					</ul>	
 				</div>
 			<div style="border:2px solid #d7dde4; height: 240px; width: 100%; margin-top:70px;">
@@ -131,25 +131,21 @@
          </div>
 			<form action=""  >
 		<div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">部门名称:</p>
-         <input type="text" class="input1">
-         </div>
-         <div class="box1 left">
          <p style="font-weight: 700; font-size:15px">岗位名称:</p>
          <input type="text" class="input1">
-
          </div>
          <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工编号:</p>
-         <input type="text" class="input1">
-
+         
          </div>
          <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
+        
+         </div>
+         <div class="box1 left">
+         <p  style="font-weight: 700; font-size:15px">岗位编号:</p>
          <input type="text" class="input1">
          </div>
            <div class="box3 right">
-         <button  class="btn btn-info"><i class="icon icon-search"></i>查询</button>
+         <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
          </div> 
          </form>
 			</div>
@@ -157,19 +153,19 @@
 			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
         	查询结果
          </div>
+         <div class=" left" style="margin:15px 5px 10px 5px">
+         <button id="a7" class="btn btn-info" style="background:#46a546"><i class="icon icon-plus"></i>增加</button>
+         </div> 
           <div class=" right" style="margin:15px 5px 10px 5px">
-         <button id="a7" class="btn btn-info"><i class="icon icon-refresh"></i>部门/岗位调动</button>
+         <button id="a8" class="btn btn-danger" ><i class="icon icon-remove"></i>删除</button>
          </div> 
 			<table class="table table-bordered table-striped table-hover " style="margin-top:15px;">
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>姓名</th>
-							<th>岗位</th>
-							<th>部门</th>
-							<th>状态</th>
-							<th>联系方式</th>
-							
+							<th>名称</th>
+							<th>编号</th>
+							<th>岗位类型</th>
+							<th>岗位编制</th>
 							
 						</tr>
 					</thead>
@@ -179,27 +175,20 @@
 							<td >赵一</td>
 							<td>职员</td>
 							<td>人事部</td>
-							<td>在职</td>
-							<td>12245345523</td>
 							
-						
 						</tr>
 						<tr class="cen">
 							<td>#002</td>
 							<td >钱二</td>
 							<td>经理</td>
 							<td>财务部</td>
-							<td>在职</td>
-							<td>246334232353</td>
-						
+							
 						</tr>
 						<tr class="cen">
 							<td>#003</td>
 							<td >孙三</td>
 							<td>秘书</td>
 							<td>技术部</td>
-							<td>在职</td>
-							<td>23521234567</td>
 							
 						</tr>
 					</tbody>
@@ -237,16 +226,40 @@ $('#a7').click(function(){
 	  offset: 'rb', //右下角弹出
 	  time: 1000, //2秒后自动关闭
 	  anim: 2,
-	  content: ['diaodong.jsp', 'no'], //iframe的url，no代表不显示滚动条
+	  content: ['gangweizengjia.jsp', 'no'], //iframe的url，no代表不显示滚动条
 	  end: function(){ //此处用于演示
 	  layer.open({
 	      type: 2,
-	      title: '调动管理。',
+	      title: '岗位增加',
 	      shadeClose: true,
 	      shade: false,
 	      maxmin: true, //开启最大化最小化按钮
-	      area: ['400px', '450px'],
-	      content: 'diaodong.jsp'
+	      area: ['400px', '500px'],
+	      content: 'gangweizengjia.jsp'
+	    });
+	  }
+	});
+	});	
+$('#a8').click(function(){
+	layer.open({
+	  type: 2,
+	  title: false,
+	  closeBtn: 0, //不显示关闭按钮
+	  shade: [0],
+	  area: ['340px', '215px'],
+	  offset: 'rb', //右下角弹出
+	  time: 1000, //2秒后自动关闭
+	  anim: 2,
+	  content: ['bumenshanchu.jsp', 'no'], //iframe的url，no代表不显示滚动条
+	  end: function(){ //此处用于演示
+	  layer.open({
+	      type: 2,
+	      title: '部门删除',
+	      shadeClose: true,
+	      shade: false,
+	      maxmin: true, //开启最大化最小化按钮
+	      area: ['420px', '270px'],
+	      content: 'gangweishanchu.jsp'
 	    });
 	  }
 	});
@@ -254,4 +267,3 @@ $('#a7').click(function(){
 </script>
 </body>
 </html>
-    
