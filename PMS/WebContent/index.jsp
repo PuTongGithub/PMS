@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>人事管理系统</title>
+<title>登录</title>
 <!-- css -->
 
 
@@ -37,6 +37,7 @@
 	<script>
 	
 	$("#bt1").click(function () {
+		
 		var username = $("#user").val();
 		var pass = $("#pass").val();
 		console.log(username);

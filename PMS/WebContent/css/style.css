@@ -2183,8 +2183,10 @@ textarea:focus {
   
 }
 
+
 .box1{
   width:240px;
+  height:60px;
   margin: 20px;
  }
 .box2{
@@ -2196,6 +2198,16 @@ textarea:focus {
  margin-top:43px;
   
 }
+box5{
+ margin-top:20px;
+ margin-right:20px;
+  
+}
+.box4{
+ width: 400px;
+  margin: 20px;
+  
+}
 
 
 .left{
@@ -2204,4 +2216,11 @@ textarea:focus {
 }
 .right{
   float:right;
+}
+.input3{
+  width: 130px;
+  border:2px solid #d7dde4;
+  height: 30px;
+   
+  
 }

@@ -137,21 +137,17 @@
          <input type="text" class="input1">
          </div>
          <div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">岗位名称:</p>
-         <input type="text" class="input1">
-
+         
          </div>
          <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工编号:</p>
-         <input type="text" class="input1">
-
+        
          </div>
          <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
+         <p  style="font-weight: 700; font-size:15px">部门编号:</p>
          <input type="text" class="input1">
          </div>
            <div class="box3 right">
-         <button  class="btn btn-info"><i class="icon icon-search"></i>查询</button>
+         <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
          </div> 
          </form>
 			</div>
@@ -159,19 +155,16 @@
 			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
         	查询结果
          </div>
-          <div class=" right" style="margin:15px 5px 10px 5px">
-         <button id="a7" class="btn btn-info"><i class="icon icon-refresh"></i>部门/岗位调动</button>
-         </div> 
 			<table class="table table-bordered table-striped table-hover " style="margin-top:15px;">
 					<thead>
 						<tr>
 							<th>id</th>
-							<th>姓名</th>
-							<th>岗位</th>
-							<th>部门</th>
-							<th>状态</th>
-							<th>联系方式</th>
-							
+							<th>编号</th>
+							<th>部门名称</th>
+							<th>类型</th>
+							<th>电话</th>
+							<th>传真</th>
+							<th>描述</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -182,7 +175,11 @@
 							<td>人事部</td>
 							<td>在职</td>
 							<td>12245345523</td>
-						
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								
+								<a title="删除">删除</a>
+							</td>
 						</tr>
 						<tr class="cen">
 							<td>#002</td>
@@ -191,7 +188,11 @@
 							<td>财务部</td>
 							<td>在职</td>
 							<td>246334232353</td>
-						
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+							
+								<a title="删除">删除</a>
+							</td>
 						</tr>
 						<tr class="cen">
 							<td>#003</td>
@@ -199,8 +200,12 @@
 							<td>秘书</td>
 							<td>技术部</td>
 							<td>在职</td>
-							<td>23521234567</td>
-							
+							<td><form><button></button> <input type="text" style="display:none ;"value="123"></form></td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								
+								<a title="删除">删除</a>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -226,32 +231,22 @@
 	</div>
 </div>
 
-<script>
-$('#a7').click(function(){
-	layer.open({
-	  type: 2,
-	  title: false,
-	  closeBtn: 0, //不显示关闭按钮
-	  shade: [0],
-	  area: ['340px', '215px'],
-	  offset: 'rb', //右下角弹出
-	  time: 1000, //2秒后自动关闭
-	  anim: 2,
-	  content: ['diaodong.jsp', 'no'], //iframe的url，no代表不显示滚动条
-	  end: function(){ //此处用于演示
-	  layer.open({
-	      type: 2,
-	      title: '调动管理。',
-	      shadeClose: true,
-	      shade: false,
-	      maxmin: true, //开启最大化最小化按钮
-	      area: ['400px', '450px'],
-	      content: 'diaodong.jsp'
-	    });
-	  }
-	});
-	});	
-</script>
+<div class="mask"></div>
+<div class="dialog">
+	<div class="dialog-hd">
+		<strong class="lt-title">标题</strong>
+		<a class="rt-operate icon-remove JclosePanel" title="关闭"></a>
+	</div>
+	<div class="dialog-bd">
+		<!--start::-->
+		<p>这里是基础弹窗,可以定义文本信息，HTML信息这里是基础弹窗,可以定义文本信息，HTML信息。</p>
+		<!--end::-->
+	</div>
+	<div class="dialog-ft">
+		<button class="btn btn-info JyesBtn">确认</button>
+		<button class="btn btn-secondary JnoBtn">关闭</button>
+	</div>
+</div>
 </body>
 </html>
     
