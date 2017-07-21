@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>EHR企业级人事管理系统</title>
+<title>GD人事管理系统</title>
 <meta name="keywords"  content="设置关键词..." />
 <meta name="description" content="设置描述..." />
 <meta name="author" content="DeathGhost" />
@@ -31,7 +31,7 @@
 					<i class="i-l-2"></i>
 					<i class="i-l-3"></i>
 				</span>
-				<strong>人事管理系统导航</strong>
+				<strong>人事管理系统</strong>
 			</div>
 		</div>
 		
@@ -64,7 +64,7 @@
 							<a href="ruzhi.jsp">入职管理</a>
 						</dd>
 						<dd>
-							<a href="shiyongqi.jsp">试用期管理</a>
+							<a href="form.html">试用期管理</a>
 						</dd>
 						<dd>
 							<a href="form.html">调动管理</a>
@@ -77,6 +77,7 @@
 						</dd>
 					</dl>
 				</li>
+
 				<li>
 					<dl>
 						<dt>
@@ -95,7 +96,9 @@
 				</li>
 				
 		</nav>
-		<footer class="side-footer">© 西电通院第五项目组 版权所有</footer>
+		
+		<footer class="side-footer">© 第五项目组 版权所有</footer>
+		
 	</div>
 	<div class="content-wrap">
 		<header class="top-hd">
@@ -104,182 +107,112 @@
 			</div>
 			<div class="hd-rt">
 				<ul>
-					
 					<li>
-						<a><i class="icon-random"></i>清除缓存</a>
-					</li>
-					<li>
-						<a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+						<a><i class="icon-user"></i>管理员:<em>GD</em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>
 					</li>
-					
 					<li>
 						<a href="javascript:void(0)" id="JsSignOut"><i class="icon-signout"></i>安全退出</a>
 					</li>
 				</ul>
 			</div>
 		</header>
-		<main class="main-cont content mCustomScrollbar " style="background:white">
+		
+		<main class="main-cont content mCustomScrollbar " style="background:white;">
 		<div class="breadcrumb">
 					<ul>
 						<li><i class="icon-user"></i><a href="#">人员管理</a><i class="icon-angle-right"></i></li>
-						<li><a href="#" style="color:blue;">离职管理</a></li>
+						<li><a href="#" style="color:blue;">员工信息查询</a></li>
 					</ul>	
 				</div>
-		 <div style="border:2px solid #d7dde4; height: 400px; width: 100%; margin-top:70px;">
-         <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
-         离职查询
+			<div style="border:2px solid #d7dde4; height: 240px; width: 100%; margin-top:70px;">
+			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+    查询条件
          </div>
-         <form action="">
-         <div class="box1 left">
+			<form action=""  >
+		<div class="box1 left">
          <p style="font-weight: 700; font-size:15px">部门名称:</p>
          <input type="text" class="input1">
          </div>
          <div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">岗位名称:</p>
-         <input type="text" class="input1">
-
+         
          </div>
          <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工编号:</p>
-         <input type="text" class="input1">
-
+        
          </div>
          <div class="box1 left">
-         <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
+         <p  style="font-weight: 700; font-size:15px">部门编号:</p>
          <input type="text" class="input1">
          </div>
-
-         <div class="box2 left">
-         <p  style="font-weight: 700; font-size:15px">开始时间:</p>
-         <input type="date" class="input2">
-
-         </div>
-         <div class="box2 left">
-         <p  style="font-weight: 700; font-size:15px">结束时间:</p>
-         <input type="date"  class="input2">
-		</div>
-   		 <div class="box2 left " style="margin-top:40px;">
-   		 <p  style="font-weight: 700; font-size:15px; ">离职原因:</p>
-   		 <select name="" id="">
-   		 <option value="辞职">辞职</option>
-   		 <option value="公司开除">公司开除</option>
-   		 
-   		  <option value="公司开除">其他</option>
-   		 </select>
-   		 
-   		 </div>
-
-
-
-          <div class="box3 right">
+           <div class="box3 right">
          <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
          </div> 
-		</form>
+         </form>
+			</div>
+			<div style="border:2px solid #d7dde4; height: 500px; width: 100%; margin-top:50px;">
+			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+        	查询结果
+         </div>
+			<table class="table table-bordered table-striped table-hover " style="margin-top:15px;">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>编号</th>
+							<th>部门名称</th>
+							<th>类型</th>
+							<th>电话</th>
+							<th>传真</th>
+							<th>描述</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="cen">
+							<td>#001</td>
+							<td >赵一</td>
+							<td>职员</td>
+							<td>人事部</td>
+							<td>在职</td>
+							<td>12245345523</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+						<tr class="cen">
+							<td>#002</td>
+							<td >钱二</td>
+							<td>经理</td>
+							<td>财务部</td>
+							<td>在职</td>
+							<td>246334232353</td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+							
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+						<tr class="cen">
+							<td>#003</td>
+							<td >孙三</td>
+							<td>秘书</td>
+							<td>技术部</td>
+							<td>在职</td>
+							<td><form><button></button> <input type="text" style="display:none ;"value="123"></form></td>
+							<td>
+								<a title="编辑" class="mr-5">编辑</a>
+								
+								<a title="删除">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+		</main>
 
-		</div>
-		</main>
-		<button type="button" class="btn btn-default btn-sm">
-          <span class="icon-search"></span> Search
-        </button>
-			<!--开始::内容-->
-			
-			
-			<script>
-				//分页
-				$(".pagination").createPage({
-			        pageCount:5,
-			        current:1,
-			        backFn:function(p){
-			            console.log(p);
-			        }
-			    });
-				//demo1
-				var dom = document.getElementById("demo1");
-				var myChart = echarts.init(dom);
-				var app = {};
-				option = null;
-				function randomData() {
-					now = new Date(+now + oneDay);
-					value = value + Math.random() * 21 - 10;
-					return {
-						name: now.toString(),
-						value: [
-							[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
-							Math.round(value)
-						]
-					}
-				}
-			
-				var data = [];
-				var now = +new Date(1997, 9, 3);
-				var oneDay = 24 * 3600 * 1000;
-				var value = Math.random() * 1000;
-				for (var i = 0; i < 1000; i++) {
-					data.push(randomData());
-				}
-			
-				option = {
-					tooltip: {
-						trigger: 'axis',
-						formatter: function (params) {
-							params = params[0];
-							var date = new Date(params.name);
-							return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1];
-						},
-						axisPointer: {
-							animation: false
-						}
-					},
-					xAxis: {
-						type: 'time',
-						splitLine: {
-							show: false
-						}
-					},
-					yAxis: {
-						type: 'value',
-						boundaryGap: [0, '100%'],
-						splitLine: {
-							show: false
-						}
-					},
-					series: [{
-						name: '模拟数据',
-						type: 'line',
-						showSymbol: false,
-						hoverAnimation: false,
-						data: data
-					}]
-				};
-			
-				setInterval(function () {
-			
-					for (var i = 0; i < 5; i++) {
-						data.shift();
-						data.push(randomData());
-					}
-			
-					myChart.setOption({
-						series: [{
-							data: data
-						}]
-					});
-				}, 1000);;
-				if (option && typeof option === "object") {
-					myChart.setOption(option, true);
-				}
-				
-				//demo2
-				
-				if (option && typeof option === "object") {
-					myChart.setOption(option, true);
-				}	
-			</script>
-			<!--开始::结束-->
-		</main>
 		<footer class="btm-ft">
 			<p class="clear">
 				<span class="fl">©Copyright 2016 <a href="#" title="DeathGhost" target="_blank">成都生产实习</a></span>
@@ -297,5 +230,23 @@
 		</footer>
 	</div>
 </div>
+
+<div class="mask"></div>
+<div class="dialog">
+	<div class="dialog-hd">
+		<strong class="lt-title">标题</strong>
+		<a class="rt-operate icon-remove JclosePanel" title="关闭"></a>
+	</div>
+	<div class="dialog-bd">
+		<!--start::-->
+		<p>这里是基础弹窗,可以定义文本信息，HTML信息这里是基础弹窗,可以定义文本信息，HTML信息。</p>
+		<!--end::-->
+	</div>
+	<div class="dialog-ft">
+		<button class="btn btn-info JyesBtn">确认</button>
+		<button class="btn btn-secondary JnoBtn">关闭</button>
+	</div>
+</div>
 </body>
 </html>
+    

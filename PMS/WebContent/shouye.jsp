@@ -64,7 +64,7 @@
 							<a href="ruzhi.jsp">入职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">试用期管理</a>
+							<a href="shiyongqi.jsp">试用期管理</a>
 						</dd>
 						<dd>
 							<a href="form.html">调动管理</a>
@@ -73,7 +73,7 @@
 							<a href="lizhi.jsp">离职管理</a>
 						</dd>
 						<dd>
-							<a href="form.html">人员信息管理</a>
+							<a href="yuangongxinxi.jsp">人员信息管理</a>
 						</dd>
 					</dl>
 				</li>

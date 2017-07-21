@@ -74,7 +74,7 @@ a:hover {
 a:active {
   color: #33be85;
 }
-/*===================公共图标库===================*/
+/*===================鍏叡鍥炬爣搴�==================*/
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   margin: 0 5px;
@@ -864,7 +864,7 @@ a:active {
 .icon-folder-open-alt:before {
   content: "\f115";
 }
-/*===================公共类===================*/
+/*===================鍏叡绫�==================*/
 .fl {
   float: left;
 }
@@ -1061,7 +1061,7 @@ a:active {
 .text-danger {
   color: #d9534f!important;
 }
-/*===================公共布局结构类===================*/
+/*===================鍏叡甯冨眬缁撴瀯绫�==================*/
 .main-wrap {
   width: 100%;
   position: absolute;
@@ -1640,7 +1640,7 @@ dialog [class^="icon-"] {
 .btm-ft p {
   font-size: inherit;
 }
-/*===================动画效果===================*/
+/*===================鍔ㄧ敾鏁堟灉===================*/
 .icon-spin {
   display: inline-block;
   -webkit-animation: spin 2s infinite linear;
@@ -1667,7 +1667,7 @@ dialog [class^="icon-"] {
     -webkit-transform: rotate(360deg);
   }
 }
-/*===================公共变量值===================*/
+/*===================鍏叡鍙橀噺鍊�==================*/
 .size-s {
   padding: 3px 10px!important;
   font-size: 12px !important;
@@ -1684,7 +1684,7 @@ dialog [class^="icon-"] {
   padding: 10px 25px!important;
   font-size: 18px !important;
 }
-/*===================按钮类===================*/
+/*===================鎸夐挳绫�==================*/
 .btn {
   -webkit-user-select: none;
   padding: 6px 15px!important;
@@ -1861,7 +1861,7 @@ dialog [class^="icon-"] {
 .btn-drop-group.open .drop-list {
   display: block;
 }
-/*===================面包屑===================*/
+/*===================闈㈠寘灞�==================*/
 .breadcrumb {
   overflow: hidden;
   background-color: #f5f5f5;
@@ -1871,7 +1871,7 @@ dialog [class^="icon-"] {
   float: left;
   color: #7e8e9f;
 }
-/*===================块引用===================*/
+/*===================鍧楀紩鐢�==================*/
 .blockquote {
   padding: 15px;
   line-height: 22px;
@@ -1880,7 +1880,7 @@ dialog [class^="icon-"] {
   background-color: #f9f9f9;
   font-size: 12px;
 }
-/*===================表单类===================*/
+/*===================琛ㄥ崟绫�==================*/
 .form-control {
   padding: 6px 15px!important;
   font-size: 14px !important;
@@ -2045,7 +2045,7 @@ textarea:focus {
   padding: 6px 0;
   color: #ccc;
 }
-/*===================表格类===================*/
+/*===================琛ㄦ牸绫�==================*/
 .table {
   width: 100%;
   max-width: 100%;
@@ -2136,7 +2136,7 @@ textarea:focus {
   padding: 10px 5px;
   overflow: hidden;
 }
-/*===================分组标题===================*/
+/*===================鍒嗙粍鏍囬===================*/
 .field-title {
   margin: 10px 0 20px;
   border: none;
@@ -2174,9 +2174,19 @@ textarea:focus {
   margin-top: 20px;
   
 }
+.input2{
+  width: 130px;
+  border:2px solid #d7dde4;
+  height: 35px;
+   
+  margin-top: 20px;
+  
+}
+
 
 .box1{
   width:240px;
+  height:60px;
   margin: 20px;
  }
 .box2{
@@ -2185,11 +2195,20 @@ textarea:focus {
 }
 
 .box3{
-  position: absolute;
-  right: 10px;
-  top:470px;
+ margin-top:43px;
   
 }
+box5{
+ margin-top:20px;
+ margin-right:20px;
+  
+}
+.box4{
+ width: 400px;
+  margin: 20px;
+  
+}
+
 
 .left{
   float: left;
@@ -2197,4 +2216,11 @@ textarea:focus {
 }
 .right{
   float:right;
+}
+.input3{
+  width: 130px;
+  border:2px solid #d7dde4;
+  height: 30px;
+   
+  
 }
