@@ -58,6 +58,9 @@
 		session.setAttribute("username", username); // 把用户名存到session中
 		response.sendRedirect("../shouye.jsp"); // 跳转到主页面
 	} else { // 如果没有查询到姓名
-		response.sendRedirect("../index.jsp"); // 跳转到登录页面
+		out.println("<SCRIPT   LANGUAGE='JavaScript'>");
+		out.println("alert('用户名或密码错误！');");
+		out.println("location.href='../index.jsp';");
+		out.println("</SCRIPT>");
 	}
 %>
