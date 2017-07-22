@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Hashtable" %>
+
+<%
+	Vector yglb = (Vector)session.getAttribute("department");
+	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+String username=(String)session.getAttribute("username");// 员工列表
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,13 +89,13 @@
 							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="table.html">新招聘员工报表</a>
+							<a href="xinjin.jsp">新招聘员工报表</a>
 						</dd>
 						<dd>
-							<a href="table.html">离职员工报表</a>
+							<a href="lizhibaobiao.jsp">离职员工报表</a>
 						</dd>
 						<dd>
-							<a href="table.html">调动员工报表</a>
+							<a href="diaodongbaobiao">调动员工报表</a>
 						</dd>
 					</dl>
 				</li>
@@ -107,7 +115,7 @@
 						<a><i class="icon-random"></i>清除缓存</a>
 					</li>
 					<li>
-						<a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+						<a><i class="icon-user"></i>管理员:<em><%=username %></em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>
@@ -160,7 +168,17 @@
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">部门:</p>
 							<br>
-							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+							<select name="department" style="width:auto;">
+										<%
+	for(int i = 0; i < yglb.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb.get(i);
+		out.println("<option>");
+		
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
+									</select>
 								
 						</div>			
 

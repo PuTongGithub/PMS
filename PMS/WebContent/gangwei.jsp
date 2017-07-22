@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Hashtable" %>
+    
+    <%
+	Vector yglb = (Vector)session.getAttribute("department");
+	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+String username=(String)session.getAttribute("username");// 员工列表
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,13 +90,13 @@
 							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="table.html">新招聘员工报表</a>
+							<a href="xinjin.jsp">新招聘员工报表</a>
 						</dd>
 						<dd>
-							<a href="table.html">离职员工报表</a>
+							<a href="lizhibaobiao.jsp">离职员工报表</a>
 						</dd>
 						<dd>
-							<a href="table.html">调动员工报表</a>
+							<a href="diaodongbaobiao.jsp">调动员工报表</a>
 						</dd>
 					</dl>
 				</li>
@@ -132,7 +140,17 @@
 			<form action=""  >
 		<div class="box1 left">
          <p style="font-weight: 700; font-size:15px">岗位名称:</p>
-         <input type="text" class="input1">
+         <select name="department" style="width:auto;">
+										<%
+	for(int i = 0; i < yglb.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb.get(i);
+		out.println("<option>");
+		
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
+									</select>
          </div>
          <div class="box1 left">
          

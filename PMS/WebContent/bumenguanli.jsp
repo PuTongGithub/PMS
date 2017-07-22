@@ -5,7 +5,8 @@
 
 <%
 	Vector yglb = (Vector)session.getAttribute("department");
-	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+	Vector yglb2 = (Vector)session.getAttribute("position"); 
+	String username=(String)session.getAttribute("username");// 员工列表
 %>
 <!DOCTYPE html>
 <html>
@@ -89,13 +90,13 @@
 							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="table.html">新招聘员工报表</a>
+							<a href="xinjin.jsp">新招聘员工报表</a>
 						</dd>
 						<dd>
-							<a href="table.html">离职员工报表</a>
+							<a href="lizhibaobiao.jsp">离职员工报表</a>
 						</dd>
 						<dd>
-							<a href="table.html">调动员工报表</a>
+							<a href="diaodongbaobiao.jsp">调动员工报表</a>
 						</dd>
 					</dl>
 				</li>
@@ -113,7 +114,7 @@
 			<div class="hd-rt">
 				<ul>
 					<li>
-						<a><i class="icon-user"></i>管理员:<em>GD</em></a>
+						<a><i class="icon-user"></i>管理员:<em><%=username %></em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>

@@ -5,7 +5,8 @@
 
 <%
 	Vector yglb = (Vector)session.getAttribute("department");
-	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+	Vector yglb2 = (Vector)session.getAttribute("position"); 
+	String username=(String)session.getAttribute("username");// 员工列表
 %>
 <!DOCTYPE html>
 <html>
@@ -114,7 +115,7 @@
 			<div class="hd-rt">
 				<ul>
 					<li>
-						<a><i class="icon-user"></i>管理员:<em>GD</em></a>
+						<a><i class="icon-user"></i>管理员:<em><%=username %></em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>
