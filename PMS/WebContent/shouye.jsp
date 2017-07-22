@@ -167,7 +167,7 @@
 									<div class="panel-bd">
 										<p class="title-description">
 						
-						后端部分：普通，刘辉</br>
+						后端部分：普通，刘辉，张强</br>
 						
 						</p>	
 									</div>
