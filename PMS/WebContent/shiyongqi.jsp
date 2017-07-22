@@ -133,7 +133,7 @@
 						</header>
 						<hr>
 					</section>
-			<form>			
+			<form action="background/TrialQuery.jsp">			
 				<div class="form-group-col-2">
 
 					<div class="form-group-col-2">
@@ -141,19 +141,19 @@
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">姓名：</p>
 							<br>
-							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 60px; width:200px" />
+							<input name="name" type="text" class="form-control form-boxed" style="margin:0px 0px 0px 60px; width:200px" />
 						</div>
 
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">编号：</p>
 							<br>
-							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 60px; width:200px" />
+							<input name="number" type="text" class="form-control form-boxed" style="margin:0px 0px 0px 60px; width:200px" />
 						</div>
 
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">部门:</p>
 							<br>
-							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+							<input name="department" type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
 								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
 									<option>请选择</option>
 									<option>技术部</option>
@@ -166,7 +166,7 @@
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">岗位:</p>
 							<br>
-							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+							<input name="position" type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
 								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
 									<option>请选择</option>
 									<option>秘书</option>
@@ -183,7 +183,7 @@
 							<p class="form-label" style="width:190px">试用期开始时间：</p>
 							<br>
 							<div class="form-cont" style="margin:0px 0px 0px 60px; width:200px">
-								<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
+								<input name="begin_date" type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
 								<!-- <p>示例：2016/04/07</p> -->
 							</div>
 						</div>
@@ -192,7 +192,7 @@
 							<p class="form-label" style="width:190px">试用期结束时间：</p>
 							<br>
 							<div class="form-cont" style="margin:0px 0px 0px 60px; width:200px">
-							<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
+							<input name="end_date" type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
 								<!-- <p>示例：2016/04/07</p> -->
 							</div>
 						</div>
@@ -200,7 +200,7 @@
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label" style="width:165px">试用期状态:</p>
 							<br>
-							<input type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
+							<input name="notes" type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
 								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
 									<option>请选择</option>
 									<option>使用中</option>

@@ -135,7 +135,7 @@
 					</ul>	
 				</div>
 
-		<form>		
+		<form action="background/EntryProcessing.jsp">		
 			<!-- 1.0 -->
 		<div style=" margin:20px 0px 0px 0px;">
 			<div style=" margin:10px 0px 0px 0px; width:100%;height:100% border-top:1px solid black;">
@@ -150,14 +150,14 @@
 							<div class="form-group-col-2" style="margin:20px 0px 0px 20px;">
 								<div class="form-label">*员工ID：</div>
 								<div class="form-cont">
-									<input type="text" class="form-control form-boxed" style="width:auto;">
+									<input name="id" type="text" class="form-control form-boxed" style="width:auto;">
 								</div>
 							</div>
 
 							<div class="form-group-col-2" style="margin:10px 0px 0px 20px;">
 								<div class="form-label">*员工姓名：</div>
 								<div class="form-cont">
-									<input type="text" class="form-control form-boxed" style="width:auto;">
+									<input name="name" type="text" class="form-control form-boxed" style="width:auto;">
 								</div>
 							</div>
 							
@@ -165,7 +165,7 @@
 							<div class="form-group-col-2" style="margin:10px 0px 0px 20px;">
 								<div class="form-label">*员工标号：</div>
 								<div class="form-cont">
-									<input type="text" class="form-control form-boxed" style="width:auto;">
+									<input name="number" type="text" class="form-control form-boxed" style="width:auto;">
 								</div>
 							</div>
 							
@@ -173,7 +173,7 @@
 							<div class="form-group-col-2" style="margin:10px 0px 0px 20px;">
 								<div class="form-label">*性别:</div>
 								<div class="form-cont">
-									<select style="width:auto;">
+									<select name=sex style="width:auto;">
 										<option>请选择</option>
 										<option>男</option>
 										<option>女</option>
@@ -190,14 +190,14 @@
 							<div class="form-group-col-2" style="margin:0px 0px 10px 0px;">
 								<div class="form-label">*身份证件：</div>
 								<div class="form-cont">
-									<input type="text" class="form-control form-boxed" style="width:185px;">
+									<input name="id_number" type="text" class="form-control form-boxed" style="width:185px;">
 								</div>		
 							</div>
 
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">
 								<div class="form-label">*出生日期：</div>
 								<div class="form-cont">
-									<input type="date" class="form-control form-boxed" style="width:auto;">
+									<input name="birthday" type="date" class="form-control form-boxed" style="width:auto;">
 									<!-- <p>示例：2016/04/07</p> -->
 								</div>
 							</div>	
@@ -205,7 +205,7 @@
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">
 								<div class="form-label">*工作时间：</div>
 								<div class="form-cont">
-									<input type="date" placeholder="" class="form-control form-boxed" style="width:auto;">			
+									<input name="work_date" type="date" placeholder="" class="form-control form-boxed" style="width:auto;">			
 										<!-- <p>示例：2016/04/07</p> -->
 								</div>
 							</div>
@@ -213,7 +213,7 @@
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">
 								<div class="form-label">*入职时间：</div>
 								<div class="form-cont">
-									<input type="date" placeholder="" class="form-control form-boxed" style="width:auto;">
+									<input name="entry_date" type="date" placeholder="" class="form-control form-boxed" style="width:auto;">
 								</div>
 							</div> 
 
@@ -225,7 +225,7 @@
 							<div class="form-group-col-2" style="margin:0px 0px 0px 0px;">
 								<div class="form-label">*部门:</div>
 								<div class="form-cont">
-									<select style="width:auto;">
+									<select name="department" style="width:auto;">
 										<option>请选择</option>
 										<option>技术部</option>
 										<option>销售部</option>
@@ -238,7 +238,7 @@
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">
 								<div class="form-label">*实习期:</div>
 								<div class="form-cont">
-									<select style="width:auto;">
+									<select name="duration" style="width:auto;">
 										<option>请选择</option>
 										<option>无</option>
 										<option>3个月</option>
@@ -250,7 +250,7 @@
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">									
 								<div class="form-label">*人员来源:</div>
 								<div class="form-cont">
-									<select style="width:auto;">
+									<select name="personnel_source" style="width:auto;">
 										<option>请选择</option>
 										<option>内部提升</option>
 										<option>外部招聘</option>
@@ -262,7 +262,7 @@
 								<div class="form-label">*用工形式:</div>
 								<div class="form-cont">
 										<!-- <input type="text" class="form-control form-boxed" style="width:100%;" placeholder="请输入..." /> -->
-									<select style="width:auto;">
+									<select name="employment_form" style="width:auto;">
 										<option>请选择</option>
 										<option>全日制用工</option>	
 										<option>劳务派遣工</option>
@@ -288,28 +288,28 @@
 							<div class="form-group-col-2" style="margin:0px 10px 10px 0px; width:auto;">
 										<div class="form-label">联系方式：</div>
 										<div class="form-connt">
-										<input type="text" class="form-control form-boxed" style="width:180px;">		
+										<input name="phone_number" type="text" class="form-control form-boxed" style="width:180px;">		
 										</div>
 							</div>			
 
 							<div class="form-group-col-2" style="margin:0px 10px 10px 0px; width:auto;">
 									<div class="form-label">电子邮件：</div>
 									<div class="form-cont">
-										<input type="text" class="form-control form-boxed" style="width:180px;" /> 
+										<input name="email" type="text" class="form-control form-boxed" style="width:180px;" /> 
 									</div>	
 							</div>
 
 							<div class="form-group-col-2" style="margin:0px 10px 10px 0px; width:auto;">
 										<div class="form-label">住址：</div>
 										<div class="form-connt">
-										<input type="text" class="form-control form-boxed" style="width:180px;">		
+										<input name="address" type="text" class="form-control form-boxed" style="width:180px;">		
 										</div>
 							</div>		
 
 							<div class="form-group-col-2" style="margin:0px 10px 10px 0px; width:auto;">
 										<div class="form-label">政治面貌：</div>
 										<div class="form-connt">
-										<input type="text" class="form-control form-boxed" style="width:180px;">		
+										<input name="politcal" type="text" class="form-control form-boxed" style="width:180px;">		
 										</div>
 							</div>
 
@@ -321,28 +321,28 @@
 							<div class="form-group-col-2" style="margin:0px 0px 0px 42px; width:auto;">
 										<div class="form-label">学历：</div>
 										<div class="form-connt">
-											<input type="text" class="form-control form-boxed" style="width:140px;">		
+											<input name="education" type="text" class="form-control form-boxed" style="width:140px;">		
 										</div>
 							</div>					
 							
 							<div class="form-group-col-2" style="margin:10px 0px 0px 45px; width:auto;">
 										<div class="form-label">毕业时间：</div>
 										<div class="form-connt">
-											<input type="date" class="form-control form-boxed" style="width:140px;">		
+											<input name="graduate_date" type="date" class="form-control form-boxed" style="width:140px;">		
 										</div>
 							</div>		
 
 							<div class="form-group-col-2" style="margin:10px 30px 0px 45px; width:180px;">
 										<div class="form-label">专业：</div>
 										<div class="form-cont">
-											<input type="text" placeholder="" class="form-control form-boxed" style="width:140px;">	
+											<input name="major" type="text" placeholder="" class="form-control form-boxed" style="width:140px;">	
 										</div>
 							</div>	
 
 							<div class="form-group-col-2" style="margin:10px 0px 0px 45px; width:auto;">
 										<div class="form-label">毕业院校：</div>
 										<div class="form-connt">
-											<input type="text" class="form-control form-boxed" style="width:140px;">		
+											<input name="school" type="text" class="form-control form-boxed" style="width:140px;">		
 										</div>
 							</div>					
 
@@ -355,7 +355,7 @@
 						<div class="form-group-col-2" style="margin:0px 30px 0px 45px; width:auto;">
 									<div class="form-label">婚姻:</div>
 									<div class="form-cont">
-										<select style="width:auto;">
+										<select name="marriage" style="width:auto;">
 											<option>请选择</option>
 											<option>已婚</option>	
 											<option>未婚</option>
@@ -370,14 +370,14 @@
 						<div class="form-group-col-2" style="margin:10px 30px 0px 45px; width:auto;">
 										<div class="form-label">备注：</div>
 										<div class="form-cont">
-											<input type="text" class="form-control form-boxed" style="width:180px;">	
+											<input name="people_notes" type="text" class="form-control form-boxed" style="width:180px;">	
 										</div>
 						</div>	
 
 						<div class="form-group-col-2" style="margin:10px 30px 0px 45px; width:auto;">
 										<div class="form-label">民族：</div>
 										<div class="form-cont">
-											<input type="text" placeholder="" class="form-control form-boxed" style="width:180px;">	
+											<input name="folk" type="text" placeholder="" class="form-control form-boxed" style="width:180px;">	
 										</div>
 						</div>	
 
