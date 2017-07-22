@@ -1,5 +1,5 @@
 <%@ page pageEncoding="utf-8"%>
-<%@ page contentType="text/html; charset=utf-8" %>
+<%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.util.Vector"%>
 <%@ page import="java.util.Hashtable"%>
 <%@ page import="java.sql.DriverManager"%>
@@ -8,25 +8,41 @@
 <%@ page import="java.sql.ResultSet"%>
 
 <%
-String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
-String number = new String(request.getParameter("number").getBytes("ISO-8859-1"),"utf-8");
+	String name = new String(request.getParameter("name").getBytes(
+			"ISO-8859-1"), "utf-8");
+	String number = new String(request.getParameter("number").getBytes(
+			"ISO-8859-1"), "utf-8");
+	String department = new String(request.getParameter("department").getBytes(
+			"ISO-8859-1"), "utf-8");
 
-String sql = "insert into positions (name,number)"+
-             " values "+
-             "('"+name+"',"+
-             "'"+number+"')";
+	String sql = "insert into positions (name,number,department,mark)" + " values "
+			+ "('" + name + "','" + number + "','" + department + "','using')";
 
-Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
-Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection
-Statement statement = connection.createStatement(); // 3 创建statement
-statement.executeQuery(sql);
-			      
-resultSet.close(); // 关闭resultSet
-statement.close(); // 关闭statement
-connection.close(); // 关闭connection 
+	//out.println(sql);
+	
+	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
+	Connection connection = DriverManager.getConnection(
+			"jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection
+	Statement statement = connection.createStatement(); // 3 创建statement
+	statement.executeUpdate(sql);
 
-out.println("<SCRIPT   LANGUAGE='JavaScript'>");
-out.println("alert('添加岗位成功！');");
-out.println("location.href='../gangweiguanli.jsp';");
-out.println("</SCRIPT>");
+	sql = "select * from positions where mark='using'";
+	ResultSet resultSet = statement.executeQuery(sql);
+	Vector position = new Vector();
+	while (resultSet.next()) {
+		Hashtable pos = new Hashtable();
+		pos.put("name", resultSet.getString("name"));
+		pos.put("number", resultSet.getString("number"));
+		position.add(pos);
+	}
+	session.setAttribute("position", position);
+
+	resultSet.close(); // 关闭resultSet
+	statement.close(); // 关闭statement
+	connection.close(); // 关闭connection 
+
+	out.println("<SCRIPT   LANGUAGE='JavaScript'>");
+	out.println("alert('添加岗位成功！');");
+	out.println("parent.location.reload();");
+	out.println("</SCRIPT>");
 %>

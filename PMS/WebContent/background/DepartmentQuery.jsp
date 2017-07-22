@@ -26,7 +26,7 @@
 	Statement statement = connection.createStatement(); // 3 创建statement
 	ResultSet resultSet = statement.executeQuery(sql); // 4 创建resultSet
 
-	Vector departmnet = new Vector();
+	Vector department = new Vector();
 	while (resultSet.next()) {
 		Hashtable tr = new Hashtable();
 		tr.put("name", resultSet.getString("name"));
@@ -35,7 +35,7 @@
 	
 		department.add(tr);
 	}
-	request.setAttribute("department", departmnet);
+	request.setAttribute("department", department);
 
 	resultSet.close(); // 关闭resultSet
 	statement.close(); // 关闭statement

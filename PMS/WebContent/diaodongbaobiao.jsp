@@ -81,13 +81,13 @@
 							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="xinjin.jsp">新招聘员工报表</a>
+							<a href="table.html">新招聘员工报表</a>
 						</dd>
 						<dd>
-							<a href="lizhibaobiao.jsp">离职员工报表</a>
+							<a href="table.html">离职员工报表</a>
 						</dd>
 						<dd>
-							<a href="diaodongbaobiao.jsp">调动员工报表</a>
+							<a href="table.html">调动员工报表</a>
 						</dd>
 					</dl>
 				</li>
