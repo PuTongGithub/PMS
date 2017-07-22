@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+    <%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Hashtable" %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -153,14 +158,17 @@
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">部门:</p>
 							<br>
-							<input name="department" type="text" class="form-control form-boxed" style="margin:0px 0px 0px 70px; width:100px" placeholder="请输入..." />
-								<!-- <select style="margin:0px 0px 0px 70px; width:100px" placeholder="">
-									<option>请选择</option>
-									<option>技术部</option>
-									<option>销售部</option>
-									<option>后勤部</option>
-									<option>人事部</option>
-								</select> -->
+							<select name="department" style="width:auto;">
+										<%
+	for(int i = 0; i < yglb.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb.get(i);
+		out.println("<option>");
+		
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
+									</select>
 						</div>			
 
 						<div class="form-group-col-2" style="float:left;">
