@@ -16,12 +16,12 @@
 			"jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection
 	Statement statement = connection.createStatement(); // 3 创建statement
 	
-    String sql = "update trial notes="+"'"+check_resulte+"'"+" where number="+"'"number"'";
+    String sql = "update trial notes="+"'"+check_resulte+"'"+" where number="+"'"+number+"'";
     ResultSet resultSet = statement.executeQuery(sql);
 	
-	if(check_resulte.equals("通过")) check_resulte="正式员工"；
-    String sql = "update employee statu="+"'"+check_resulte+"'"+" where number="+"'"number"'";
-    ResultSet resultSet = statement.executeQuery(sql);
+	if(check_resulte.equals("通过")) check_resulte="正式员工";
+    sql = "update employee statu="+"'"+check_resulte+"'"+" where number="+"'"+number+"'";
+    resultSet = statement.executeQuery(sql);
     
 
     

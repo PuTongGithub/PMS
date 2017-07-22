@@ -28,22 +28,25 @@
 	}
 
 	if (user_exist) {
-		sql = "select * from departments";
+		sql = "select * from departments where mark='using'";
 		resultSet = statement.executeQuery(sql);
 		Vector department = new Vector();
 		while (resultSet.next()) {
 			Hashtable dep = new Hashtable();
 			dep.put("name", resultSet.getString("name"));
+			System.out.println(resultSet.getString("name"));
 			dep.put("number", resultSet.getString("number"));
 			department.add(dep);
 		}
 		session.setAttribute("department", department);
 
-		sql = "select * from positions";
+		sql = "select * from positions where mark='using'";
+		resultSet = statement.executeQuery(sql);
 		Vector position = new Vector();
 		while (resultSet.next()) {
 			Hashtable pos = new Hashtable();
 			pos.put("name", resultSet.getString("name"));
+			System.out.println(resultSet.getString("name"));
 			pos.put("number", resultSet.getString("number"));
 			position.add(pos);
 		}

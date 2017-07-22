@@ -92,13 +92,13 @@
 							<i class="icon-table"></i>报表管理<i class="icon-angle-right"></i>
 						</dt>
 						<dd>
-							<a href="xinjin.jsp">新招聘员工报表</a>
+							<a href="table.html">新招聘员工报表</a>
 						</dd>
 						<dd>
-							<a href="lizhibaobiao.jsp">离职员工报表</a>
+							<a href="table.html">离职员工报表</a>
 						</dd>
 						<dd>
-							<a href="diaodongbaobiao.jsp">调动员工报表</a>
+							<a href="table.html">调动员工报表</a>
 						</dd>
 					</dl>
 				</li>
@@ -149,19 +149,9 @@
 							<!-- 员工姓名 -->
 								
 							<div class="form-group-col-2" style="margin:20px 0px 0px 20px;">
-								<div class="form-label">*岗位选择：</div>
+								<div class="form-label">*员工ID：</div>
 								<div class="form-cont">
-									<select name="department" style="width:auto;">
-										<%
-	for(int i = 0; i < yglb2.size(); i = i + 1) {
-		Hashtable yg = (Hashtable)yglb.get(i);
-		out.println("<option>");
-		
-		out.println( yg.get("name") );
-		out.println("</option>");
-	}
-%>
-									</select>
+									<input name="id" type="text" class="form-control form-boxed" style="width:auto;">
 								</div>
 							</div>
 

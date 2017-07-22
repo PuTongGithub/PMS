@@ -273,7 +273,7 @@ $('#a7').click(function(){
 	      shadeClose: true,
 	      shade: false,
 	      maxmin: true, //开启最大化最小化按钮
-	      area: ['400px', '600px'],
+	      area: ['500px', '400px'],
 	      content: 'bumenzengjia.jsp'
 	    });
 	  }
