@@ -4,8 +4,8 @@
 <%@ page import="java.util.Hashtable" %>
 
 <%
-	Vector yglb = (Vector)request.getAttribute("department");
-	Vector yglb2 = (Vector)request.getAttribute("position"); // 员工列表
+	Vector yglb = (Vector)session.getAttribute("department");
+	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
 %>
 <!DOCTYPE html>
 <html>
