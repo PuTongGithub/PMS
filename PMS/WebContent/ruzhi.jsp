@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Hashtable" %>
+
+<%
+	Vector yglb = (Vector)request.getAttribute("department");
+	Vector yglb2 = (Vector)request.getAttribute("position"); // 员工列表
+%>
 <!DOCTYPE html>
 <html>
 <head>
