@@ -226,11 +226,15 @@
 								<div class="form-label">*部门:</div>
 								<div class="form-cont">
 									<select name="department" style="width:auto;">
-										<option>请选择</option>
-										<option>技术部</option>
-										<option>销售部</option>
-										<option>后勤部</option>
-										<option>人事部</option>
+										<%
+	for(int i = 0; i < yglb.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb.get(i);
+		out.println("<option>");
+		
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
 									</select>
 								</div>	
 							</div>
