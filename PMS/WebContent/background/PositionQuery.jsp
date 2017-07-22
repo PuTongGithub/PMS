@@ -8,7 +8,7 @@
 <%@ page import="java.sql.ResultSet"%>
 
 <%
-	String sql = "select name,number from positions where mark != 'delete'";
+	String sql = "select name,number,department from positions where mark != 'delete'";
 
 	String name = new String(request.getParameter("name").getBytes(
 			"ISO-8859-1"), "utf-8");
@@ -37,7 +37,7 @@
 		tr.put("name", resultSet.getString("name"));
 		//out.println(tr.get("name"));
 		tr.put("number", resultSet.getString("number"));
-
+		tr.put("department", resultSet.getString("department"));
 		position.add(tr);
 	}
 	request.setAttribute("position", position);
