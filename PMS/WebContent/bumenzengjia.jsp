@@ -22,7 +22,7 @@
 </div>
 </div>
 
-<div style="margin-top: 30px;height:40px; ">	
+<div style="margin-top: 30px;height:40px;  border-bottom: 1px solid black;">	
 <div class="left" style="margin-left:60px;">
 <p style="font-weight: 700">请输入新增部门名称：</p>
 </div>
@@ -31,35 +31,13 @@
 </div>
 </div>
 
-<div style="margin-top: 30px;height:60px;  ">	
-<div class="left" style="margin-left:60px;">
-<p style="font-weight: 700">请输入新增部门类型：</p>
-</div>
-<div class="right" style="margin-right:60px;">
-<input type="text" class="input3">
-</div>
-</div>
-<div style="margin-top: 30px;height:60px;  ">	
-<div class="left" style="margin-left:60px;">
-<p style="font-weight: 700">请输入新增部门电话：</p>
-</div>
-<div class="right" style="margin-right:60px;">
-<input type="text" class="input3">
-</div>
-</div>
-<div style="margin-top: 30px;height:60px; border-bottom:1px solid black; ">	
-<div class="left" style="margin-left:60px;">
-<p style="font-weight: 700">请输入新增部门传真：</p>
-</div>
-<div class="right" style="margin-right:60px;">
-<input type="text" class="input3">
-</div>
-</div>
-</form>
 
-  <div class="box3 right">
+<div class="box3 right">
          <button class="btn btn-info radius" ><i class="icon-olus"></i>确认增加 </button>
          </div> 
 
+</form>
+
+  
 </body>
 </html>
