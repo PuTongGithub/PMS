@@ -5,8 +5,6 @@
 <%@ page import="java.sql.ResultSet"%>
 
 <%
-String number = new String(request.getParameter("number").getBytes("ISO-8859-1"),"utf-8");
-
 String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8"); //获取用户表相关
 String sex = new String(request.getParameter("sex").getBytes("ISO-8859-1"),"utf-8");;
 String number = new String(request.getParameter("number").getBytes("ISO-8859-1"),"utf-8");;
@@ -27,7 +25,7 @@ String marriage = new String(request.getParameter("marriage").getBytes("ISO-8859
 String politcal = new String(request.getParameter("politcal").getBytes("ISO-8859-1"),"utf-8");;
 String education = new String(request.getParameter("education").getBytes("ISO-8859-1"),"utf-8");;
 String school = new String(request.getParameter("school").getBytes("ISO-8859-1"),"utf-8");;
-String notes = new String(request.getParameter("notes").getBytes("ISO-8859-1"),"utf-8");;
+String people_notes = new String(request.getParameter("people_notes").getBytes("ISO-8859-1"),"utf-8");;
 String major = new String(request.getParameter("major").getBytes("ISO-8859-1"),"utf-8");;
 String graduate_date = new String(request.getParameter("graduate_date").getBytes("ISO-8859-1"),"utf-8");;
 String folk = new String(request.getParameter("folk").getBytes("ISO-8859-1"),"utf-8");;
@@ -36,9 +34,8 @@ String begin_date = new String(request.getParameter("begin_date").getBytes("ISO-
 String end_date;
 String duration = new String(request.getParameter("duration").getBytes("ISO-8859-1"),"utf-8");;
 String mark = new String(request.getParameter("mark").getBytes("ISO-8859-1"),"utf-8");;
-String notes = new String(request.getParameter("notes").getBytes("ISO-8859-1"),"utf-8");;
+String trial_notes = new String(request.getParameter("trial_notes").getBytes("ISO-8859-1"),"utf-8");;
 
-String begin_date = request.getParameter("test"); //statu,end_date处理
 char[] b = begin_date.toCharArray();
 int d = 0;
 if(duration.equals("无")) statu = "正式员工";
@@ -59,12 +56,12 @@ Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306
 Statement statement = connection.createStatement(); // 3 创建statement
 
 String sql = "insert into employee (name,sex,number,birthday,id_number,department,postion,entry_date,work_date,employment_form,personnel_source,statu)"+
-                                    "values"+
+                                    " values "+
                                     "('"+name+"',"+
                                     "'"+sex+"',"+
                                     "'"+number+"',"+
-                                    "'"birthday+"',"+
-                                    "'"id_number+"',"+
+                                    "'"+birthday+"',"+
+                                    "'"+id_number+"',"+
                                     "'"+department+"',"+
                                     "'"+postion+"',"+
                                     "'"+entry_date+"',"+
@@ -74,8 +71,8 @@ String sql = "insert into employee (name,sex,number,birthday,id_number,departmen
                                     "'"+statu+"')"; //插入员工表
 statement.executeQuery(sql);
                              		
-String sql = "insert into people (name,number,phone_number,email,address,marriage,politcal,education,school,notes,major,graduate_date,folk)"+
-		                            "values"+
+sql = "insert into people (name,number,phone_number,email,address,marriage,politcal,education,school,notes,major,graduate_date,folk)"+
+		                            " values "+
 		                            "('"+name+"',"+
 		                            "'"+number+"',"+
 		                            "'"+phone_number+"',"+
@@ -85,26 +82,25 @@ String sql = "insert into people (name,number,phone_number,email,address,marriag
 		                            "'"+politcal+"',"+
 		                            "'"+education+"',"+
 		                            "'"+school+"',"+
-		                            "'"+notes+"',"+
+		                            "'"+people_notes+"',"+
 		                            "'"+major+"',"+
 		                            "'"+graduate_date+"',"+
 		                            "'"+folk+"')"; //插入人员表
 statement.executeQuery(sql);                                 
 
 if(d!=0){
-String sql = "insert into trial (name,number,begin_date,end_date,duration,mark,notes)"+
-                                    "values"+
+sql = "insert into trial (name,number,begin_date,end_date,duration,mark,notes)"+
+                                    " values "+
                                     "('"+name+"',"+
                                     "'"+number+"',"+
                                     "'"+begin_date+"',"+
          		                    "'"+end_date+"',"+
          		                    "'"+duration+"',"+
          		                    "'"+mark+"',"+
-         		                    "'"+notes+"')"; //插入实习表
+         		                    "'"+trial_notes+"')"; //插入实习表
 statement.executeQuery(sql);
 }
 
-resultSet.close(); // 关闭resultSet
 statement.close(); // 关闭statement
 connection.close(); // 关闭connection
 
