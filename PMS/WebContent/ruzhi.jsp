@@ -226,6 +226,7 @@
 								<div class="form-label">*部门:</div>
 								<div class="form-cont">
 									<select name="department" style="width:auto;">
+									<option>请选择</option>
 										<%
 	for(int i = 0; i < yglb.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb.get(i);
