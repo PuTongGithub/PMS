@@ -134,7 +134,7 @@
 						<li><a href="#" style="color:blue;">离职管理</a></li>
 					</ul>	
 				</div>
-		 <div style="border:2px solid #d7dde4; height: 400px; width: 100%; margin-top:70px;">
+		 <div style="border:2px solid #d7dde4; height: 350px; width: 100%; margin-top:10px;">
          <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
          离职查询
          </div>
@@ -206,10 +206,15 @@
 		</form>
 
 		</div>
+		 <div style="border:2px solid #d7dde4; height: 400px; width: 100%; margin-top:20px;">
+         <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+         查询结果
+         </div>
+         </div>
 		</main>
-		<button type="button" class="btn btn-default btn-sm">
-          <span class="icon-search"></span> Search
-        </button>
+		
+        
+        
 			<!--开始::内容-->
 			
 			

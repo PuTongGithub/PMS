@@ -232,7 +232,7 @@
 						shadeClose : true,
 						shade : false,
 						maxmin : true, //开启最大化最小化按钮
-						area : [ '400px', '500px' ],
+						area : [ '400px', '450px' ],
 						content : 'gangweizengjia.jsp'
 					});
 				}
