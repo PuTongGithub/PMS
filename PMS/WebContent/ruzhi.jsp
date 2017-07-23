@@ -28,6 +28,27 @@
 <script src="editor/ueditor.all.js"></script>
 <script src="javascript/plug-ins/pagination.js"></script>
 <script src="javascript/public.js"></script>
+<script>
+function tijiao() {
+	
+	var c1 = document.getElementById('name').value;
+	var c2 = document.getElementById('number').value;
+	var c3 = document.getElementById('id_number').value;
+	var c4 = document.getElementById('birthday').value;
+	var c5 = document.getElementById('work_date').value;
+	var c6 = document.getElementById('entry_date').value;
+	
+	
+	// alert(mm);
+	if( c1=='' || c2==''||c3==''|| c4=='' || c5==''||c6=='') {
+		alert('请填入完整信息');
+	} else {
+		var form1 = document.getElementById('form1');
+		form1.submit();
+	}
+
+}
+</script>
 </head>
 <body>
 
@@ -132,7 +153,7 @@
 				</ul>
 			</div>
 
-			<form action="background/EntryProcessing.jsp" method="post">
+			<form action="background/EntryProcessing.jsp" method="post" id="form1">
 				<!-- 1.0 -->
 				<div style="margin: 20px 0px 0px 0px;">
 					<div
@@ -153,7 +174,7 @@
 								<div class="form-label">*员工姓名：</div>
 								<div class="form-cont">
 									<input name="name" type="text" class="form-control form-boxed"
-										style="width: auto;">
+										style="width: auto;" id="name">
 								</div>
 							</div>
 
@@ -162,12 +183,12 @@
 								<div class="form-label">*员工标号：</div>
 								<div class="form-cont">
 									<input name="number" type="text"
-										class="form-control form-boxed" style="width: auto;">
+										class="form-control form-boxed" style="width: auto;" id="number">
 								</div>
 							</div>
 
 							<!-- 性别 -->
-							<div class="form-group-col-2" style="margin: 10px 0px 0px 20px;">
+							<div class="form-group-col-2" style="margin: 10px 0px 0px 20px;" >
 								<div class="form-label">*性别:</div>
 								<div class="form-cont">
 									<select name=sex style="width: auto;">
@@ -182,7 +203,7 @@
 								<div class="form-cont">
 									<input name="id_number" type="text"
 										class="form-control form-boxed"
-										style="width: 185px; margin-left: 5px;">
+										style="width: 185px; margin-left: 5px;" id=id_number>
 								</div>
 							</div>
 
@@ -197,7 +218,7 @@
 							<div class="form-group-col-2" style="margin: -15px 0px 10px 0px;">
 								<div class="form-label">*实习期:</div>
 								<div class="form-cont">
-									<select name="duration" style="width: auto;">
+									<select name="duration" style="width: auto; "id="duration">
 
 										<option>无</option>
 										<option>3个月</option>
@@ -211,7 +232,7 @@
 								<div class="form-label">*出生日期：</div>
 								<div class="form-cont">
 									<input name="birthday" type="date"
-										class="form-control form-boxed" style="width: auto;">
+										class="form-control form-boxed" style="width: auto;"id="birthday">
 									<!-- <p>示例：2016/04/07</p> -->
 								</div>
 							</div>
@@ -220,7 +241,7 @@
 								<div class="form-label">*工作时间：</div>
 								<div class="form-cont">
 									<input name="work_date" type="date" placeholder=""
-										class="form-control form-boxed" style="width: auto;">
+										class="form-control form-boxed" style="width: auto;" id="work_date">
 									<!-- <p>示例：2016/04/07</p> -->
 								</div>
 							</div>
@@ -229,7 +250,7 @@
 								<div class="form-label">*入职时间：</div>
 								<div class="form-cont">
 									<input name="entry_date" type="date" placeholder=""
-										class="form-control form-boxed" style="width: auto;">
+										class="form-control form-boxed" style="width: auto;" id="entry_date">
 								</div>
 							</div>
 
@@ -432,9 +453,9 @@
 					<div class="page-wrap"
 						style="position: absolute; top: 545px; left: 0px; border-top: 1px solid black; width: 100%; height: 100%">
 						<div>
-							<input type="submit" class="btn radius"
+							<input type="button" class="btn radius"
 								style="position: absolute; top: 20px; left: 510px; background: #46a546; color: white;"
-								name="提交 " />
+								value="提交"  onclick="tijiao()"/>
 						</div>
 					</div>
 
