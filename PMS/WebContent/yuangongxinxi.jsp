@@ -159,7 +159,7 @@
          <select name="department" style="width:auto;">
 										<%
 	for(int i = 0; i < yglb2.size(); i = i + 1) {
-		Hashtable yg = (Hashtable)yglb.get(i);
+		Hashtable yg = (Hashtable)yglb2.get(i);
 		out.println("<option>");
 		
 		out.println( yg.get("name") );
