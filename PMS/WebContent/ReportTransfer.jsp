@@ -15,7 +15,7 @@
 
 	String sql = "select employee.number,employee.name,employee.sex,employee.department,employee.position,transfer.transfer_date,transfer.notes"+
 	             " from employee,transfer"+
-	             " where employee.number = people.number";
+	             " where employee.number = transfer.number";
 	
 	if(!department.equals("")){
 		sql += " and department = '" + department + "'";
@@ -29,6 +29,7 @@
 		sql += " and end_date <= '" + end_date + "'";
 	}
 
+	//out.println(sql);
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(
 			"jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection

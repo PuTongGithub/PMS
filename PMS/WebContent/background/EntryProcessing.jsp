@@ -45,14 +45,16 @@ int d = 0;
 if(duration.equals("无")) statu = "正式员工";
 else {
 	statu = "实习期";
-	if(duration.equals("三个月")) d = 3;
+	if(duration.equals("3个月")) d = 3;
 	else d = 6;
+	
 	int m = 10*(b[5]-'0')+b[6]-'0'+d;
 	int y = 1000*(b[0]-'0')+100*(b[1]-'0')+10*(b[2]-'0')+(b[3]-'0');
 	y = y + m/12;
 	m = m%12;
 	if(m>9) end_date = ""+y+'-'+m+'-'+b[8]+b[9];
 	else end_date = ""+y+'-'+'0'+m+'-'+b[8]+b[9]; //end_date
+	
 }
 	
 Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动

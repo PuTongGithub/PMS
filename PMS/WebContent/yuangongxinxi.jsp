@@ -74,7 +74,7 @@
 							<a href="ruzhi.jsp">入职管理</a>
 						</dd>
 						<dd>
-							<a href="shiyongqi.jsp">试用期管理</a>
+							<a href="form.html">试用期管理</a>
 						</dd>
 					
 						<dd>
