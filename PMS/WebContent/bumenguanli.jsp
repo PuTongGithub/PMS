@@ -6,7 +6,9 @@
 <%
 	Vector yglb = (Vector)session.getAttribute("department");
 	Vector yglb2 = (Vector)session.getAttribute("position"); 
-	String username=(String)session.getAttribute("username");// 员工列表
+	Vector department=(Vector)request.getAttribute("department");
+	String username=(String)session.getAttribute("username");// 
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -180,55 +182,24 @@
 			<table class="table table-bordered table-striped table-hover " style="margin-top:15px;">
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>编号</th>
+							<th>部门编号</th>
 							<th>部门名称</th>
-							<th>类型</th>
-							<th>电话</th>
-							<th>传真</th>
-							<th>描述</th>
+							
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="cen">
-							<td>#001</td>
-							<td >赵一</td>
-							<td>职员</td>
-							<td>人事部</td>
-							<td>在职</td>
-							<td>12245345523</td>
-							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-								
-								<a title="删除">删除</a>
-							</td>
-						</tr>
-						<tr class="cen">
-							<td>#002</td>
-							<td >钱二</td>
-							<td>经理</td>
-							<td>财务部</td>
-							<td>在职</td>
-							<td>246334232353</td>
-							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-							
-								<a title="删除">删除</a>
-							</td>
-						</tr>
-						<tr class="cen">
-							<td>#003</td>
-							<td >孙三</td>
-							<td>秘书</td>
-							<td>技术部</td>
-							<td>在职</td>
-							<td>1232131243455</td>
-							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-								
-								<a title="删除">删除</a>
-							</td>
-						</tr>
+						
+<%
+	for(int i = 0; i < department.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("number") + "</td>");
+		out.println("<td>" + yg.get("name") + "</td>");
+		
+		out.println("</tr>");
+	}
+%>
+
 					</tbody>
 				</table>
 				
