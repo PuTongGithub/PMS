@@ -62,6 +62,8 @@
 		tr.put("begin_date", resultSet.getString("begin_date"));
 		tr.put("end_date", resultSet.getString("end_date"));
 		tr.put("duration", resultSet.getString("duration"));
+		tr.put("department", resultSet.getString("department"));
+		tr.put("position", resultSet.getString("position"));
 		notes = resultSet.getString("notes");
 		if (notes == null) {
 			tr.put("notes", "");
