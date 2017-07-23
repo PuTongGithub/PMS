@@ -5,7 +5,8 @@
     
     <%
 	Vector yglb = (Vector)session.getAttribute("department");
-	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+	Vector yglb2 = (Vector)session.getAttribute("position"); 
+	Vector recruit = (Vector)request.getAttribute("recruit");// 员工列表
 String username=(String)session.getAttribute("username");// 员工列表
 %>
 <!DOCTYPE html>
@@ -160,7 +161,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 							</div>
 						</div>
 
-						<div class="form-group-col-2" style="float:left;">
+						<div class="form-group-col-2" style="float:left; margin-left:50px;">
 							<p class="form-label">部门:</p>
 							<br>
 							 <select name="department" style="width:auto;">
@@ -216,43 +217,23 @@ String username=(String)session.getAttribute("username");// 员工列表
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="cen">
-							<td>1001</td>
-							<td>赵一</td>
-							<td>男</td>
-							<td>人事部</td>
-							<td>文员</td>
-							<td>2016/03/01</td>
-							<td>研究生</td>
-							<td>
-								试用中
-							</td>
-						</tr>
-						<tr class="cen">
-							<td>1002</td>
-							<td>钱二</td>
-							<td>男</td>
-							<td>人事部</td>
-							<td>部长</td>
-							<td>2016/03/01</td>
-							<td>大学本科</td>
-							<td>
-								试用中
-							</td>
-						</tr>
-						<tr class="cen">
-							<td>1003</td>
-							<td>张三</td>
-							<td>女</td>
-							<td>财务部</td>
-							<td>文员</td>
-							<td>2016/03/01</td>
-							<td>研究生</td>
-							<td>
-								正式员工
-							</td>
-						</tr>
-
+					<% 
+						if(recruit!=null){
+	for(int i = 0; i < recruit.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)recruit.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("number") + "</td>");
+		out.println("<td>" + yg.get("name") + "</td>");	
+		out.println("<td>" + yg.get("sex") + "</td>");
+		out.println("<td>" + yg.get("department") + "</td>");
+		out.println("<td>" + yg.get("position") + "</td>");
+		out.println("<td>" + yg.get("entry_date") + "</td>");
+		out.println("<td>" + yg.get("statu") + "</td>");
+		out.println("<td>" + yg.get("education") + "</td>");
+		out.println("</tr>");
+	}
+     }
+	%>
 					</tbody>
 				</table>
 				<div class="form-group-col-2">	
