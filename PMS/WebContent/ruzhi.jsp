@@ -136,7 +136,7 @@
 					</ul>	
 				</div>
 
-		<form action="background/EntryProcessing.jsp">		
+		<form action="background/EntryProcessing.jsp" method="post">		
 			<!-- 1.0 -->
 		<div style=" margin:20px 0px 0px 0px;">
 			<div style=" margin:10px 0px 0px 0px; width:100%;height:100% border-top:1px solid black;">

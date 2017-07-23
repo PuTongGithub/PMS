@@ -139,10 +139,10 @@
 			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
     查询条件
          </div>
-			<form action=""  >
+			<form action="DepartmentQuery.jsp"  method="post">
 		<div class="box1 left">
          <p style="font-weight: 700; font-size:15px">部门名称:</p>
-        <select name="department" style="width:auto;">
+        <select name="name" style="width:auto;">
 										<%
 	for(int i = 0; i < yglb.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb.get(i);
@@ -162,7 +162,7 @@
          </div>
          <div class="box1 left">
          <p  style="font-weight: 700; font-size:15px">部门编号:</p>
-         <input type="text" class="input1">
+         <input name="number" type="text" class="input1">
          </div>
            <div class="box3 right">
          <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
@@ -190,7 +190,7 @@
 					<tbody>
 						
 <%
-   if(department!=null){
+if(department!=null){
 	for(int i = 0; i < department.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)department.get(i);
 		out.println("<tr>");
@@ -199,7 +199,7 @@
 		
 		out.println("</tr>");
 	}
-   }
+}
 %>
 
 					</tbody>
