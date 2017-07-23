@@ -139,7 +139,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 						</header>
 						
 					</section>
-			<form>			
+			<form action="ReportResign.jsp" method="post">			
 				<div class="form-group-col-2" style="border-top:1px solid black;">
 
 					<div class="form-group-col-2">
@@ -148,7 +148,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 							<p class="form-label" style="width:190px">开始时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 							<br>
 							<div class="form-cont" style="margin:0px 0px 0px 60px; width:200px">
-								<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
+								<input name="begin_date" type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
 								<!-- <p>示例：2016/04/07</p> -->
 							</div>
 						</div>
@@ -157,7 +157,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 							<p class="form-label" style="width:190px">结束时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 							<br>
 							<div class="form-cont" style="margin:0px 0px 0px 60px; width:200px">
-							<input type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
+							<input name="end_date" type="date" placeholder="" class="form-control form-boxed" style="width:100%;" />						
 								<!-- <p>示例：2016/04/07</p> -->
 							</div>
 						</div>
@@ -167,6 +167,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 							<p class="form-label">部门:</p>
 							<br>
 							<select name="department" style="width:auto;">
+							<option></option>
 										<%
 	for(int i = 0; i < yglb.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb.get(i);
