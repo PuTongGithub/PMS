@@ -15,7 +15,19 @@
 
 	String sql = "select employee.number,employee.name,employee.sex,employee.department,employee.position,transfer.transfer_date,transfer.notes"+
 	             " from employee,transfer"+
-	             " where employee.number = people.number and employee.department='"+department+"' and transfer.transfer_date between '"+begin_date+"' and '"+end_date+"'";
+	             " where employee.number = people.number";
+	
+	if(!department.equals("")){
+		sql += " and department = '" + department + "'";
+	}
+
+	if (!begin_date.equals("")) {
+		sql += " and begin_date >= '" + begin_date + "'";
+	}
+
+	if (!end_date.equals("")) {
+		sql += " and end_date <= '" + end_date + "'";
+	}
 
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(
@@ -33,12 +45,13 @@
 		tr.put("position", resultSet.getString("employee.position"));
 		tr.put("transfer_date", resultSet.getString("transfer.transfer_date"));
 		tr.put("notes", resultSet.getString("transfer.notes"));
-		trial.add(tr);
+		transfer.add(tr);
 	}
 	request.setAttribute("transfer", transfer);
 
 	resultSet.close(); // 关闭resultSet
 	statement.close(); // 关闭statement
 	connection.close(); // 关闭connection 
-	response.sendRedirect("../diaodongbaobiao.jsp"); // 跳转到试用期管理页面
+	request.getRequestDispatcher("diaodongbaobiao.jsp").forward(request, response);
+	//response.sendRedirect("../diaodongbaobiao.jsp"); // 跳转到试用期管理页面
 %>

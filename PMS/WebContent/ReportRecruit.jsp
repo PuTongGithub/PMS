@@ -13,17 +13,29 @@
     String begin_date = new String(request.getParameter("begin_date").getBytes("ISO-8859-1"),"utf-8");
     String end_date = new String(request.getParameter("end_date").getBytes("ISO-8859-1"),"utf-8");
 
-	String sql = "select employee.number,employee.name,employee.sex,employee.department,employee.position,resign.resign_date,resign.resign_type"+
-	             " from employee,resign"+
-	             " where employee.number = people.number and employee.department='"+department+"' and resign.resign_date between '"+begin_date+"' and '"+end_date+"'";
+	String sql = "select employee.number,employee.name,employee.sex,employee.department,employee.position,employee.entry_date,employee.statu,people.education"+
+	             " from employee,people"+
+			     " where employee.number = people.number";
 
+	if(!department.equals("")){
+		sql += " and department = '" + department + "'";
+	}
+
+	if (!begin_date.equals("")) {
+		sql += " and begin_date >= '" + begin_date + "'";
+	}
+
+	if (!end_date.equals("")) {
+		sql += " and end_date <= '" + end_date + "'";
+	}
+	
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(
 			"jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection
 	Statement statement = connection.createStatement(); // 3 创建statement
 	ResultSet resultSet = statement.executeQuery(sql); // 4 创建resultSet
 	
-	Vector resign = new Vector();
+	Vector recruit = new Vector();
 	while (resultSet.next()) {
 		Hashtable tr = new Hashtable();
 		tr.put("number", resultSet.getString("employee.number"));
@@ -31,14 +43,16 @@
 		tr.put("sex", resultSet.getString("employee.sex"));
 		tr.put("department", resultSet.getString("employee.department"));
 		tr.put("position", resultSet.getString("employee.position"));
-		tr.put("resign_date", resultSet.getString("resign.resign_date"));
-		tr.put("resign_type", resultSet.getString("resign.resign_type"));
-		trial.add(tr);
+		tr.put("entry_date", resultSet.getString("employee.entry_date"));
+		tr.put("statu", resultSet.getString("employee.statu"));
+		tr.put("education", resultSet.getString("people.education"));
+		recruit.add(tr);
 	}
-	request.setAttribute("resign", resign);
+	request.setAttribute("recruit", recruit);
 
 	resultSet.close(); // 关闭resultSet
 	statement.close(); // 关闭statement
 	connection.close(); // 关闭connection 
-	response.sendRedirect("../lizhibaobiao.jsp"); // 跳转到试用期管理页面
+	request.getRequestDispatcher("xinjin.jsp").forward(request, response);
+	//response.sendRedirect("../xinjin.jsp"); // 跳转到试用期管理页面
 %>
