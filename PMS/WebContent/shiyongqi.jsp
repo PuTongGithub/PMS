@@ -153,7 +153,7 @@
 									style="margin: 0px 0px 0px 60px; width: 200px" />
 							</div>
 
-							<div class="form-group-col-2" style="float: left;">
+							<div class="form-group-col-2" style="float: left; margin-left:70px;">
 								<p class="form-label">部门:</p>
 								<br> <select name="department" style="width: auto;">
 									<option></option>
@@ -168,7 +168,7 @@
 								</select>
 							</div>
 
-							<div class="form-group-col-2" style="float: left;">
+							<div class="form-group-col-2" style="float: left;margin-left:50px;">
 								<p class="form-label">岗位:</p>
 								<br> <select name="position" style="width: auto;">
 									<option></option>
@@ -245,9 +245,14 @@
 				<section class="page-hd"> <header>
 				<h4 class="title">查询结果</h4>
 				</header>
+				
 				<hr>
 				</section>
-
+				<div class=" right" style="margin: 5px 5px 10px 5px">
+					<button id="a7" class="btn btn-info right" style="background: #46a546">
+						<i class="icon icon-refreshi"></i>更改试用期状态
+					</button>
+				</div>
 				<table class="table table-bordered  mb-15">
 					<thead>
 						<tr>
@@ -399,5 +404,31 @@
 			</footer>
 		</div>
 	</div>
+	<script>
+	$('#a7').click(function() {
+			layer.open({
+				type : 2,
+				title : false,
+				closeBtn : 0, //不显示关闭按钮
+				shade : [ 0 ],
+				area : [ '340px', '215px' ],
+				offset : 'rb', //右下角弹出
+				time : 1000, //2秒后自动关闭
+				anim : 2,
+				content : [ 'shiyongqigenggai.jsp', 'no' ], //iframe的url，no代表不显示滚动条
+				end : function() { //此处用于演示
+					layer.open({
+						type : 2,
+						title : '更改试用期状态',
+						shadeClose : true,
+						shade : false,
+						maxmin : true, //开启最大化最小化按钮
+						area : [ '400px', '300px' ],
+						content : 'shiyongqigenggai.jsp'
+					});
+				}
+			});
+		});
+	</script>
 </body>
 </html>
