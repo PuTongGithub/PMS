@@ -15,7 +15,7 @@
 
 	String sql = "select employee.number,employee.name,employee.sex,employee.department,employee.position,employee.entry_date,employee.statu,people.education"+
 	             " from employee,people"+
-			     " where employee.number = people.number";
+			     " where employee.number = people.number and employee.statu != '离职'";
 
 	if(!department.equals("")){
 		sql += " and department = '" + department + "'";

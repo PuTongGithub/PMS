@@ -144,6 +144,7 @@
          <div class="box1 left">
          <p style="font-weight: 700; font-size:15px">部门名称:</p>
          <select name="department" style="width:auto;">
+   		 <option></option>
 										<%
 	for(int i = 0; i < yglb.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb.get(i);
@@ -158,6 +159,7 @@
          <div class="box1 left">
          <p style="font-weight: 700; font-size:15px">岗位名称:</p>
          <select name="position" style="width:auto;">
+   		 <option></option>
 										<%
 	for(int i = 0; i < yglb2.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb2.get(i);
@@ -192,6 +194,7 @@
    		 <div class="box2 left " style="margin-top:40px;">
    		 <p  style="font-weight: 700; font-size:15px; ">离职原因:</p>
    		 <select name="resign_type" id="">
+   		 <option></option>
    		 <option value="辞职">辞职</option>
    		 <option value="辞退">辞退</option>	 
    		  <option value="退休">退休</option>

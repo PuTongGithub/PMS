@@ -13,12 +13,12 @@
 
 	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
 	if (!name.equals("")) {
-		sql += " and trial.name = '" + name + "'";
+		sql += " and name = '" + name + "'";
 	}
 
 	String number = new String(request.getParameter("number").getBytes("ISO-8859-1"),"utf-8");
 	if (!number.equals("")) {
-		sql += " and trial.number = '" + number + "'";
+		sql += " and number = '" + number + "'";
 	}
 
 	String department = new String(request.getParameter("department").getBytes("ISO-8859-1"),"utf-8");
@@ -45,8 +45,10 @@
 	if (!end_date.equals("")) {
 		sql += " resign_type = '" + type + "'";
 	}
+	
+	out.println(sql);
 
-	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
+ 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(
 			"jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection
 	Statement statement = connection.createStatement(); // 3 创建statement
@@ -72,5 +74,5 @@
 	connection.close(); // 关闭connection 
 	
 	request.getRequestDispatcher("lizhi.jsp").forward(request, response);
-	//response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面
+	//response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面 
 %>

@@ -12,7 +12,7 @@
 	<div style="border-bottom: 1px solid black;">
 		<h1>&nbsp;&nbsp;人员调离</h1>
 	</div>
-	<form action="background/TrialCheck.jsp" method="post">
+	<form action="background/JobResign.jsp" method="post">
 		<div style="height: 40px; margin-top: 20px;">
 			<div class="left" style="margin-left: 60px;">
 				<p style="font-weight: 700">请输入员工编号：</p>
@@ -36,7 +36,7 @@
 				<p style="font-weight: 700">请选择离职类型：</p>
 			</div>
 			<div class="right" style="margin-right: 60px;">
-				<select name="check_resulte">
+				<select name="resign_type">
 				<option>辞职</option>
 				<option>辞退</option>
 				<option>退休</option>
