@@ -27,29 +27,34 @@
 	
 	String name = resultSet.getString("name");
 	String entry_date = resultSet.getString("entry_date");
-	String deparment = resultSet.getString("department");
+	String department = resultSet.getString("department");
 	String position = resultSet.getString("position");
 	
 	sql = "insert into resign (name,number,begin_date,resign_date,department,position,resign_type)"+
 			     " values "+
 			     "('"+name+"',"+
                  "'"+number+"',"+
-                 "'"+begin_date+"',"+
+                 "'"+entry_date+"',"+
                  "'"+resign_date+"',"+
                  "'"+department+"',"+
                  "'"+position+"',"+
                  "'"+resign_type+"')";
-	resultSet = statement.executeUpdate(sql);
+	int resultNum = statement.executeUpdate(sql);
 	
 	sql = "update employee set statu='离职' where number="+"'"+number+"'";
-	resultSet = statement.executeUpdate(sql);
+	resultNum  += statement.executeUpdate(sql);
 
 	resultSet.close(); // 关闭resultSet
 	statement.close(); // 关闭statement
 	connection.close(); // 关闭connection 
 	
 	out.println("<SCRIPT   LANGUAGE='JavaScript'>");
-	out.println("alert('离职成功');");
+	if(resultNum > 1){
+		out.println("alert('离职操作成功！');");
+	}
+	else{
+		out.println("alert('离职操作失败！');");
+	}
 	out.println("location.href='../lizhi.jsp';");
 	out.println("</SCRIPT>");
 %>
