@@ -58,7 +58,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 							<a href="bumenguanli.jsp">部门管理</a>
 						</dd>
 						<dd>
-							<a href="button.html">岗位管理</a>
+							<a href="gangwei.jsp">岗位管理</a>
 						</dd>
 					</dl>
 				</li>

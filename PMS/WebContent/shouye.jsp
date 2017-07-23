@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+     <%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Hashtable" %>
+
+<%
+	
+	String username=(String)session.getAttribute("username");// 员工列表
+%>
+<!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -107,7 +115,7 @@
 						<a><i class="icon-random"></i>清除缓存</a>
 					</li>
 					<li>
-						<a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+						<a><i class="icon-user"></i>管理员:<em><%=username %>></em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>

@@ -112,7 +112,7 @@
 				</div>
 				<div class="hd-rt">
 					<ul>
-						<li><a><i class="icon-user"></i>管理员:<em>GD</em></a></li>
+						<li><a><i class="icon-user"></i>管理员:<em><%=username %>></em></a></li>
 						<li><a><i class="icon-bell-alt"></i>系统消息</a></li>
 						<li><a href="javascript:void(0)" id="JsSignOut"><i
 								class="icon-signout"></i>安全退出</a></li>

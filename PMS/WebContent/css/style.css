@@ -2233,3 +2233,7 @@ box5{
 	color:white;
 	cursor:pointer;
 }
+
+td{
+	text-align:center;
+}
