@@ -111,18 +111,16 @@ String username=(String)session.getAttribute("username");// 员工列表
 			<div class="hd-rt">
 				<ul>
 					
+					
 					<li>
-						<a><i class="icon-random"></i>清除缓存</a>
-					</li>
-					<li>
-						<a><i class="icon-user"></i>管理员:<em><%=username %>></em></a>
+						<a><i class="icon-user"></i>管理员:<em><%=username %></em></a>
 					</li>
 					<li>
 						<a><i class="icon-bell-alt"></i>系统消息</a>
 					</li>
 					
 					<li>
-						<a href="javascript:void(0)" id="JsSignOut"><i class="icon-signout"></i>安全退出</a>
+						<a href="indext.jsp" id="JsSignOu"><i class="icon-signout"></i>安全退出</a>
 					</li>
 				</ul>
 			</div>

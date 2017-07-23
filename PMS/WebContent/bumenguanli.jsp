@@ -122,7 +122,7 @@
 						<a><i class="icon-bell-alt"></i>系统消息</a>
 					</li>
 					<li>
-						<a href="javascript:void(0)" id="JsSignOut"><i class="icon-signout"></i>安全退出</a>
+						<a href="index.jsp" id="JsSignOu"><i class="icon-signout"></i>安全退出</a>
 					</li>
 				</ul>
 			</div>
