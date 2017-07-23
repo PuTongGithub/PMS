@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-
+<!--  -->
 <%@ page import="java.util.Vector"%>
 <%@ page import="java.util.Hashtable"%>
 <%
 	Vector yglb = (Vector) session.getAttribute("department");
 	Vector yglb2 = (Vector) session.getAttribute("position");
+	Vector trial = (Vector) request.getAttribute("trial");
 	String username = (String) session.getAttribute("username");// 员工列表// 员工列表
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -160,7 +161,6 @@
 										for (int i = 0; i < yglb.size(); i = i + 1) {
 											Hashtable yg = (Hashtable) yglb.get(i);
 											out.println("<option>");
-
 											out.println(yg.get("name"));
 											out.println("</option>");
 										}
@@ -217,6 +217,7 @@
 									style="margin: 0px 0px 0px 70px; width: 100px"
 									placeholder="请输入..." /> -->
 								<select name="notes" style="margin:0px 0px 0px 70px; width:100px">
+								     <option></option>
 									<option>试用中</option>
 									<option>未通过</option>
 									<option>已录用</option>
@@ -256,43 +257,28 @@
 							<th>岗位</th>
 							<th>试用期开始时间</th>
 							<th>试用期结束时间</th>
-							<th>试用期状态</th>
-							<th>操作</th>
+							<th>试用时间</th>
+							<th>状态</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="cen">
-							<td>赵一</td>
-							<td>1001</td>
-							<td>人事部</td>
-							<td>文员</td>
-							<td>正常</td>
-							<td>2016/03/01</td>
-							<td>2016/06/01</td>
-							<td><a title="编辑" class="mr-5">编辑</a> <a title="删除">删除</a></td>
-						</tr>
-						<tr class="cen">
-							<td>钱二</td>
-							<td>1002</td>
-							<td>人事部</td>
-							<td>部长</td>
-							<td>正常</td>
-							<td>2016/03/01</td>
-							<td>2016/06/01</td>
-							<td><a title="编辑" class="mr-5">编辑</a> <a title="删除">删除</a></td>
-						</tr>
-						<tr class="cen">
-							<td>张三</td>
-							<td>1003</td>
-							<td>财务部</td>
-							<td>文员</td>
-							<td>正常</td>
-							<td>2016/03/01</td>
-							<td>2016/06/01</td>
-							<td><a title="编辑" class="mr-5">编辑</a> <a title="删除">删除</a></td>
-						</tr>
-
-					</tbody>
+						<% 
+						if(trial!=null){
+	for(int i = 0; i < trial.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)trial.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("name") + "</td>");
+		out.println("<td>" + yg.get("number") + "</td>");	
+		out.println("<td>" + yg.get("department") + "</td>");
+		out.println("<td>" + yg.get("position") + "</td>");
+		out.println("<td>" + yg.get("begin_date") + "</td>");
+		out.println("<td>" + yg.get("end_date") + "</td>");
+		out.println("<td>" + yg.get("duration") + "</td>");
+		out.println("<td>" + yg.get("notes") + "</td>");
+		out.println("</tr>");
+	}
+     }
+	%>
 				</table>
 
 				<!--开始::结束-->
