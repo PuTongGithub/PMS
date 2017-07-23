@@ -5,7 +5,8 @@
 
 <%
 	Vector yglb = (Vector)session.getAttribute("department");
-	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+	Vector yglb2 = (Vector)session.getAttribute("position"); 
+	Vector resign = (Vector)request.getAttribute("resign"); // 员工列表
 String username=(String)session.getAttribute("username");// 员工列表
 %>
 <!DOCTYPE html>
@@ -163,7 +164,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 						</div>
 						
 
-						<div class="form-group-col-2" style="float:left;">
+						<div class="form-group-col-2" style="float:left; margin-left:50px;">
 							<p class="form-label">部门:</p>
 							<br>
 							<select name="department" style="width:auto;">
@@ -220,45 +221,22 @@ String username=(String)session.getAttribute("username");// 员工列表
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="cen">
-							<td>1001</td>
-							<td>赵一</td>
-							<td>男</td>
-							<td>人事部</td>
-							<td>文员</td>
-							<td>2016/03/01</td>
-							<td>个人意愿</td>
-							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-								<a title="删除">删除</a>
-							</td>
-						</tr>
-						<tr class="cen">
-							<td>1002</td>
-							<td>钱二</td>
-							<td>男</td>
-							<td>人事部</td>
-							<td>部长</td>
-							<td>2016/03/01</td>
-							<td>公司指派</td>
-							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-								<a title="删除">删除</a>
-							</td>
-						</tr>
-						<tr class="cen">
-							<td>1003</td>
-							<td>张三</td>
-							<td>女</td>
-							<td>财务部</td>
-							<td>文员</td>
-							<td>2016/03/01</td>
-							<td>个人意愿</td>
-							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-								<a title="删除">删除</a>
-							</td>
-						</tr>
+						<% 
+						if(resign!=null){
+	for(int i = 0; i < resign.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)resign.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("number") + "</td>");
+		out.println("<td>" + yg.get("name") + "</td>");	
+		out.println("<td>" + yg.get("sex") + "</td>");
+		out.println("<td>" + yg.get("department") + "</td>");
+		out.println("<td>" + yg.get("position") + "</td>");
+		out.println("<td>" + yg.get("resign_date") + "</td>");
+		out.println("<td>" + yg.get("resign_type") + "</td>");
+		out.println("</tr>");
+	}
+     }
+	%>
 
 					</tbody>
 				</table>
