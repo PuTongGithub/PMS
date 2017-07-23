@@ -6,7 +6,9 @@
 <%
 	Vector yglb = (Vector)session.getAttribute("department");
 	Vector yglb2 = (Vector)session.getAttribute("position");
-	String username=(String)session.getAttribute("username");// 员工列表
+	String username=(String)session.getAttribute("username");
+	Vector trial=(Vector)request.getAttribute("trial");
+	// 员工列表
 %>
 
     
@@ -191,9 +193,8 @@
    		 <p  style="font-weight: 700; font-size:15px; ">离职原因:</p>
    		 <select name="resign_type" id="">
    		 <option value="辞职">辞职</option>
-   		 <option value="公司开除">公司开除</option>
-   		 
-   		  <option value="公司开除">其他</option>
+   		 <option value="辞退">辞退</option>	 
+   		  <option value="退休">退休</option>
    		 </select>
    		 
    		 </div>
@@ -210,6 +211,42 @@
          <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
          查询结果
          </div>
+         <div class=" right" style="margin: 5px 5px 10px 5px">
+					<button id="a7" class="btn btn-danger right" >
+						<i class="icon icon-remove"></i>人员调离
+					</button>
+				</div>
+         <table class="table table-bordered  mb-15">
+					<thead>
+						<tr>
+						    <th>编号</th>
+							<th>姓名</th>					
+							 <th>部门</th>
+							 <th>岗位</th>
+							<th>试用期开始时间</th>
+							<th>试用期结束时间</th>
+							<th>状态</th>
+						
+						</tr>
+					</thead>
+					<tbody>
+						<% 
+						if(trial!=null){
+	for(int i = 0; i < trial.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)trial.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("number") + "</td>");
+		out.println("<td>" + yg.get("name") + "</td>");	
+		out.println("<td>" + yg.get("department") + "</td>");
+		out.println("<td>" + yg.get("position") + "</td>");
+		out.println("<td>" + yg.get("begin_date") + "</td>");
+		out.println("<td>" + yg.get("resign_date") + "</td>");
+		out.println("<td>" + yg.get("type") + "</td>");		
+		out.println("</tr>");
+	}
+     }
+	%>
+				</table>
          </div>
 		</main>
 		
@@ -328,5 +365,31 @@
 		</footer>
 	</div>
 </div>
+<script>
+	$('#a7').click(function() {
+			layer.open({
+				type : 2,
+				title : false,
+				closeBtn : 0, //不显示关闭按钮
+				shade : [ 0 ],
+				area : [ '340px', '215px' ],
+				offset : 'rb', //右下角弹出
+				time : 1000, //2秒后自动关闭
+				anim : 2,
+				content : [ 'diaoli.jsp', 'no' ], //iframe的url，no代表不显示滚动条
+				end : function() { //此处用于演示
+					layer.open({
+						type : 2,
+						title : '人员离职',
+						shadeClose : true,
+						shade : false,
+						maxmin : true, //开启最大化最小化按钮
+						area : [ '400px', '400px' ],
+						content : 'diaoli.jsp'
+					});
+				}
+			});
+		});
+	</script>
 </body>
 </html>

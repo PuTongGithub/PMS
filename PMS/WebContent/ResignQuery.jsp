@@ -9,7 +9,7 @@
 
 <%
 	String sql = "select name, number, department, position, begin_date, resign_date, resign_type"
-			+ " from resign where";
+			+ " from resign where true";
 
 	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
 	if (!name.equals("")) {
