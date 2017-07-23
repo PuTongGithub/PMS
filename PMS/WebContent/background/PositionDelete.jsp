@@ -11,7 +11,7 @@
 	String number = new String(request.getParameter("number").getBytes(
 			"ISO-8859-1"), "utf-8");
 	String sql = "update positions set mark='delete' where number = '"
-			+ number + "'";
+			+ number + "' and mark = 'using'";
 
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(

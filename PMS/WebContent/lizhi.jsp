@@ -157,10 +157,10 @@
          </div>
          <div class="box1 left">
          <p style="font-weight: 700; font-size:15px">岗位名称:</p>
-         <select name="department" style="width:auto;">
+         <select name="position" style="width:auto;">
 										<%
 	for(int i = 0; i < yglb2.size(); i = i + 1) {
-		Hashtable yg = (Hashtable)yglb.get(i);
+		Hashtable yg = (Hashtable)yglb2.get(i);
 		out.println("<option>");
 		
 		out.println( yg.get("name") );
@@ -172,26 +172,26 @@
          </div>
          <div class="box1 left">
          <p  style="font-weight: 700; font-size:15px">员工编号:</p>
-         <input type="text" class="input1">
+         <input name="number" type="text" class="input1">
 
          </div>
          <div class="box1 left">
          <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
-         <input type="text" class="input1">
+         <input name="name" type="text" class="input1">
          </div>
 
          <div class="box2 left">
          <p  style="font-weight: 700; font-size:15px">开始时间:</p>
-         <input type="date" class="input2">
+         <input name="begin_date" type="date" class="input2">
 
          </div>
          <div class="box2 left">
          <p  style="font-weight: 700; font-size:15px">结束时间:</p>
-         <input type="date"  class="input2">
+         <input name="end_date" type="date"  class="input2">
 		</div>
    		 <div class="box2 left " style="margin-top:40px;">
    		 <p  style="font-weight: 700; font-size:15px; ">离职原因:</p>
-   		 <select name="" id="">
+   		 <select name="resign_type" id="">
    		 <option value="辞职">辞职</option>
    		 <option value="公司开除">公司开除</option>
    		 
