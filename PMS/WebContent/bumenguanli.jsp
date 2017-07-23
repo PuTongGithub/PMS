@@ -190,14 +190,16 @@
 					<tbody>
 						
 <%
+   if(department!=null){
 	for(int i = 0; i < department.size(); i = i + 1) {
-		Hashtable yg = (Hashtable)yglb.get(i);
+		Hashtable yg = (Hashtable)department.get(i);
 		out.println("<tr>");
 		out.println("<td>" + yg.get("number") + "</td>");
 		out.println("<td>" + yg.get("name") + "</td>");
 		
 		out.println("</tr>");
 	}
+   }
 %>
 
 					</tbody>
