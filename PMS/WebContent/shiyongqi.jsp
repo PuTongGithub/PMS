@@ -141,7 +141,7 @@
 						</header>
 						<hr>
 					</section>
-			<form action="background/TrialQuery.jsp">			
+			<form action="TrialQuery.jsp" method="post">			
 				<div class="form-group-col-2">
 
 					<div class="form-group-col-2">
@@ -177,10 +177,10 @@
 						<div class="form-group-col-2" style="float:left;">
 							<p class="form-label">岗位:</p>
 							<br>
-							<select name="department" style="width:auto;">
+							<select name="position" style="width:auto;">
 										<%
 	for(int i = 0; i < yglb2.size(); i = i + 1) {
-		Hashtable yg = (Hashtable)yglb.get(i);
+		Hashtable yg = (Hashtable)yglb2.get(i);
 		out.println("<option>");
 		
 		out.println( yg.get("name") );

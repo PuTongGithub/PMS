@@ -133,7 +133,7 @@
 				<div
 					style="background: #d7dde4; width: 100%; height: 40px; line-height: 40px;">
 					查询条件</div>
-				<form action="background/PositionQuery.jsp" method="post">
+				<form action="PositionQuery.jsp" method="post">
 					<div class="box1 left">
 						<p style="font-weight: 700; font-size: 15px">岗位名称:</p>
 						<select name="name" style="width: auto;">

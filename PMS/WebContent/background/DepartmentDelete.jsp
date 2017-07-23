@@ -16,7 +16,7 @@
 	Connection connection = DriverManager.getConnection(
 			"jdbc:mysql://127.0.0.1:3306/pms_database", "root", "root"); // 2 创建connection
 	Statement statement = connection.createStatement(); // 3 创建statement
-	statement.executeUpdate(sql); // 4 创建resultSet
+	int resultNum = statement.executeUpdate(sql); // 4 创建resultSet
 	
 	sql = "select * from departments where mark='using'";
 	ResultSet resultSet = statement.executeQuery(sql);
@@ -34,7 +34,12 @@
 	connection.close(); // 关闭connection 
 	
 	out.println("<SCRIPT   LANGUAGE='JavaScript'>");
-	out.println("alert('删除部门成功！');");
+	if(resultNum > 0){
+		out.println("alert('删除部门成功！');");
+	}
+	else{
+		out.println("alert('删除部门失败！');");
+	}
 	out.println("parent.location.reload();");
 	out.println("</SCRIPT>");
 %>

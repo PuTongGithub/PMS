@@ -75,5 +75,7 @@
 	resultSet.close(); // 关闭resultSet
 	statement.close(); // 关闭statement
 	connection.close(); // 关闭connection 
-	response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面
+	
+	request.getRequestDispatcher("shiyongqi.jsp").forward(request, response);
+	//response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面
 %>
