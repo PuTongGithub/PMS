@@ -9,7 +9,7 @@
 
 <%
 	String sql = "select trial.name, trial.number, department, position, begin_date, end_date, duration, notes "
-			+ "from trial natural join employee where mark != 'delete'";
+			+ "from trial,employee where trial.number=employee.number and mark != 'delete'";
 
 	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
 	if (!name.equals("")) {
@@ -45,7 +45,7 @@
 	if (!notes.equals("")) {
 		sql += " and notes = '" + notes + "'";
 	}
-	//out.println(sql);
+	out.println(sql);
 
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(

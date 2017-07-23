@@ -10,9 +10,9 @@
 <body>
 <body>
 	<div style="border-bottom: 1px solid black;">
-		<h1>&nbsp;&nbsp;部门增加</h1>
+		<h1>&nbsp;&nbsp;更改试用期状态</h1>
 	</div>
-	<form action="background/DepartmentAdd.jsp" method="post">
+	<form action="background/TrialCheck.jsp" method="post">
 		<div style="height: 40px; margin-top: 20px;">
 			<div class="left" style="margin-left: 60px;">
 				<p style="font-weight: 700">请输入员工编号：</p>
@@ -28,7 +28,7 @@
 				<p style="font-weight: 700">请选择更改的试用期状态：</p>
 			</div>
 			<div class="right" style="margin-right: 60px;">
-				<select>
+				<select name="check_resulte">
 				<option>试用中</option>
 				<option>未通过</option>
 				<option>已录用</option>
