@@ -5,7 +5,8 @@
 
 <%
 	Vector yglb = (Vector) session.getAttribute("department");
-	Vector yglb2 = (Vector) session.getAttribute("position"); // 员工列表
+	Vector yglb2 = (Vector) session.getAttribute("position"); 
+	Vector position = (Vector) request.getAttribute("position");// 员工列表
 	String username = (String) session.getAttribute("username");// 员工列表
 %>
 <!DOCTYPE html>
@@ -179,35 +180,26 @@
 					style="margin-top: 15px;">
 					<thead>
 						<tr>
-							<th>名称</th>
 							<th>编号</th>
-							<th>岗位类型</th>
-							<th>岗位编制</th>
+							<th>名称</th>
+							<th>所属部门</th>
+							
 
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="cen">
-							<td>#001</td>
-							<td>赵一</td>
-							<td>职员</td>
-							<td>人事部</td>
-
-						</tr>
-						<tr class="cen">
-							<td>#002</td>
-							<td>钱二</td>
-							<td>经理</td>
-							<td>财务部</td>
-
-						</tr>
-						<tr class="cen">
-							<td>#003</td>
-							<td>孙三</td>
-							<td>秘书</td>
-							<td>技术部</td>
-
-						</tr>
+	<% 
+						if(position!=null){
+	for(int i = 0; i < position.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)position.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("number") + "</td>");
+		out.println("<td>" + yg.get("name") + "</td>");
+		out.println("<td>" + yg.get("department") + "</td>");
+		out.println("</tr>");
+	}
+     }
+	%>
 					</tbody>
 				</table>
 
