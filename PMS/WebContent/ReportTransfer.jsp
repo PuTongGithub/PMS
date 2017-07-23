@@ -22,11 +22,11 @@
 	}
 
 	if (!begin_date.equals("")) {
-		sql += " and begin_date >= '" + begin_date + "'";
+		sql += " and transfer_date >= '" + begin_date + "'";
 	}
 
 	if (!end_date.equals("")) {
-		sql += " and end_date <= '" + end_date + "'";
+		sql += " and transfer_date <= '" + end_date + "'";
 	}
 
 	//out.println(sql);

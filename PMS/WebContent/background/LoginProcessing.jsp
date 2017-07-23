@@ -7,8 +7,8 @@
 <%@ page import="java.sql.ResultSet"%>
 
 <%
-	String username = request.getParameter("username"); //获得用户输入的用户名与密码
-	String password = request.getParameter("password");
+	String username = new String(request.getParameter("username").getBytes("ISO-8859-1"),"utf-8"); //获得用户输入的用户名与密码
+	String password = new String(request.getParameter("password").getBytes("ISO-8859-1"),"utf-8");
 	System.out.println("用户名=" + username);
 	System.out.println("密码=" + password);
 

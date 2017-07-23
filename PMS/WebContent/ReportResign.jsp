@@ -18,15 +18,15 @@
 	             " where employee.number = resign.number";
 
 	if(!department.equals("")){
-		sql += " and department = '" + department + "'";
+		sql += " and employee.department = '" + department + "'";
 	}
 
 	if (!begin_date.equals("")) {
-		sql += " and begin_date >= '" + begin_date + "'";
+		sql += " and resign_date >= '" + begin_date + "'";
 	}
 
 	if (!end_date.equals("")) {
-		sql += " and end_date <= '" + end_date + "'";
+		sql += " and resign_date <= '" + end_date + "'";
 	}
 	
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
