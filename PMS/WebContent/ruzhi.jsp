@@ -148,12 +148,7 @@
 					<div class="form-group-col-2" style=" float:left; margin:0px 0px 0px 0px;">
 							<!-- 员工姓名 -->
 								
-							<div class="form-group-col-2" style="margin:20px 0px 0px 20px;">
-								<div class="form-label">*员工ID：</div>
-								<div class="form-cont">
-									<input name="id" type="text" class="form-control form-boxed" style="width:auto;">
-								</div>
-							</div>
+							
 
 							<div class="form-group-col-2" style="margin:10px 0px 0px 20px;">
 								<div class="form-label">*员工姓名：</div>
@@ -175,12 +170,19 @@
 								<div class="form-label">*性别:</div>
 								<div class="form-cont">
 									<select name=sex style="width:auto;">
-										<option>请选择</option>
+									
 										<option>男</option>
 										<option>女</option>
 									</select>
 								</div>	
 							</div>
+							<div class="form-group-col-2" style="margin:10px 0px 10px 15px;">
+								<div class="form-label">*身份证件：</div>
+								<div class="form-cont">
+									<input name="id_number" type="text" class="form-control form-boxed" style="width:185px; margin-left:5px;">
+								</div>		
+							</div>
+							
 
 					</div>
 
@@ -188,12 +190,18 @@
 					<div class="page-wrap" style="float:left; margin:0px 0px 0px 30px;">	
 						
 					<!-- 身份证件 -->
-							<div class="form-group-col-2" style="margin:0px 0px 10px 0px;">
-								<div class="form-label">*身份证件：</div>
+							<div class="form-group-col-2" style="margin:-15px 0px 10px 0px;">
+								<div class="form-label">*实习期:</div>
 								<div class="form-cont">
-									<input name="id_number" type="text" class="form-control form-boxed" style="width:185px;">
-								</div>		
+									<select name="duration" style="width:auto;">
+										
+										<option>无</option>
+										<option>3个月</option>
+										<option>6个月</option>
+									</select>
+								</div>	
 							</div>
+
 
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">
 								<div class="form-label">*出生日期：</div>
@@ -221,7 +229,7 @@
 					</div>
 		
 					<!-- 1.3 -->		
-					<div class="page-wrap" style="float:left; width:35%; height:100%; margin:0px 0px 0px 15px;">
+					<div class="page-wrap" style="float:left; width:35%; height:100%; margin:-15px 0px 0px 15px;">
 
 							<div class="form-group-col-2" style="margin:0px 0px 0px 0px;">
 								<div class="form-label">*部门:</div>
@@ -241,23 +249,28 @@
 								</div>	
 							</div>
 
-							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">
-								<div class="form-label">*实习期:</div>
+							<div class="form-group-col-2" style="margin:10px 0px 0px 20px;">
+								<div class="form-label">岗位：</div>
 								<div class="form-cont">
-									<select name="duration" style="width:auto;">
-										<option>请选择</option>
-										<option>无</option>
-										<option>3个月</option>
-										<option>6个月</option>
+									<select name="position" style="width:auto;">
+									
+										<%
+	for(int i = 0; i < yglb2.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb2.get(i);
+		out.println("<option>");
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
 									</select>
-								</div>	
+								</div>
 							</div>
 
 							<div class="form-group-col-2" style="margin:10px 0px 10px 0px;">									
 								<div class="form-label">*人员来源:</div>
 								<div class="form-cont">
 									<select name="personnel_source" style="width:auto;">
-										<option>请选择</option>
+									
 										<option>内部提升</option>
 										<option>外部招聘</option>
 									</select>
@@ -269,7 +282,7 @@
 								<div class="form-cont">
 										<!-- <input type="text" class="form-control form-boxed" style="width:100%;" placeholder="请输入..." /> -->
 									<select name="employment_form" style="width:auto;">
-										<option>请选择</option>
+										
 										<option>全日制用工</option>	
 										<option>劳务派遣工</option>
 										<option>非全日制用工</option>
@@ -362,7 +375,7 @@
 									<div class="form-label">婚姻:</div>
 									<div class="form-cont">
 										<select name="marriage" style="width:auto;">
-											<option>请选择</option>
+											
 											<option>已婚</option>	
 											<option>未婚</option>
 											<option>离异</option>
