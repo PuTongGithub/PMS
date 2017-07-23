@@ -8,8 +8,8 @@
 <%@ page import="java.sql.ResultSet"%>
 
 <%
-	String sql = "select trial.name, trial.number, department, position, begin_date, end_date, duration, notes "
-			+ "from trial,employee where trial.number=employee.number and mark != 'delete'";
+	String sql = "select name, number, department, position, begin_date, resign_date, resign_type"
+			+ " from resign where";
 
 	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
 	if (!name.equals("")) {
@@ -33,19 +33,18 @@
 
 	String begin_date = request.getParameter("begin_date");
 	if (!begin_date.equals("")) {
-		sql += " and begin_date >= '" + begin_date + "'";
+		sql += " and resign_date >= '" + begin_date + "'";
 	}
 
 	String end_date = request.getParameter("end_date");
 	if (!end_date.equals("")) {
-		sql += " and end_date <= '" + end_date + "'";
+		sql += " and resign_date <= '" + end_date + "'";
 	}
 	
-	String notes = new String(request.getParameter("notes").getBytes("ISO-8859-1"),"utf-8");
-	if (!notes.equals("")) {
-		sql += " and notes = '" + notes + "'";
+	String type = request.getParameter("type");
+	if (!end_date.equals("")) {
+		sql += " resign_type = '" + type + "'";
 	}
-	//out.println(sql);
 
 	Class.forName("com.mysql.jdbc.Driver"); // 1 加载驱动
 	Connection connection = DriverManager.getConnection(
@@ -60,16 +59,10 @@
 		//out.println(tr.get("name"));
 		tr.put("number", resultSet.getString("number"));
 		tr.put("begin_date", resultSet.getString("begin_date"));
-		tr.put("end_date", resultSet.getString("end_date"));
-		tr.put("duration", resultSet.getString("duration"));
+		tr.put("resign_date", resultSet.getString("resign_date"));
+		tr.put("type", resultSet.getString("resign_type"));
 		tr.put("department", resultSet.getString("department"));
 		tr.put("position", resultSet.getString("position"));
-		notes = resultSet.getString("notes");
-		if (notes == null) {
-			tr.put("notes", "");
-		} else {
-			tr.put("notes", notes);
-		}
 		trial.add(tr);
 	}
 	request.setAttribute("trial", trial);
@@ -78,6 +71,6 @@
 	statement.close(); // 关闭statement
 	connection.close(); // 关闭connection 
 	
-	request.getRequestDispatcher("shiyongqi.jsp").forward(request, response);
+	request.getRequestDispatcher("lizhi.jsp").forward(request, response);
 	//response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面
 %>

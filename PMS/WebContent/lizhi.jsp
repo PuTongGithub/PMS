@@ -138,7 +138,7 @@
          <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
          离职查询
          </div>
-         <form action="">
+         <form action="ResignQuery.jsp" method="post">
          <div class="box1 left">
          <p style="font-weight: 700; font-size:15px">部门名称:</p>
          <select name="department" style="width:auto;">
@@ -201,7 +201,7 @@
 
 
           <div class="box3 right">
-         <button class="btn btn-info radius" ><i class="icon-search"></i>查询</button>
+         <button class="btn btn-info radius" type="submit"><i class="icon-search"></i>查询</button>
          </div> 
 		</form>
 
