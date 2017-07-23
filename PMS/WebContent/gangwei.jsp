@@ -137,16 +137,7 @@
 				<form action="PositionQuery.jsp" method="post">
 					<div class="box1 left">
 						<p style="font-weight: 700; font-size: 15px">岗位名称:</p>
-						<select name="name" style="width: auto;">
-							<%
-								for (int i = 0; i < yglb2.size(); i = i + 1) {
-									Hashtable yg = (Hashtable) yglb2.get(i);
-									out.println("<option>");
-									out.println(yg.get("name"));
-									out.println("</option>");
-								}
-							%>
-						</select>
+						<input name="name" type="text" class="input1">
 					</div>
 					<div class="box1 left"></div>
 					<div class="box1 left"></div>

@@ -142,17 +142,7 @@
 			<form action="DepartmentQuery.jsp"  method="post">
 		<div class="box1 left">
          <p style="font-weight: 700; font-size:15px">部门名称:</p>
-        <select name="name" style="width:auto;">
-										<%
-	for(int i = 0; i < yglb.size(); i = i + 1) {
-		Hashtable yg = (Hashtable)yglb.get(i);
-		out.println("<option>");
-		
-		out.println( yg.get("name") );
-		out.println("</option>");
-	}
-%>
-									</select>
+        <input name="name" type="text" class="input1">
          </div>
          <div class="box1 left">
          
