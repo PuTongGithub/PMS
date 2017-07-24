@@ -142,7 +142,7 @@
          </div>
 			<form action="StaffQuery.jsp" method="post">
 		<div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">部门名称:</p>
+         <p style="font-weight: 700; font-size:15px;margin-bottom:20px;" >部门名称:</p>
          <select name="department" style="width:auto;">
          <option></option>
 										<%
@@ -157,7 +157,7 @@
 									</select>
          </div>
          <div class="box1 left">
-         <p style="font-weight: 700; font-size:15px">岗位名称:</p>
+         <p style="font-weight: 700; font-size:15px;margin-bottom:20px;">岗位名称:</p>
          <select name="position" style="width:auto;">
          <option></option>
 										<%
@@ -217,8 +217,7 @@
 		out.println("<td>" + yg.get("department") + "</td>");
 		out.println("<td>" + yg.get("position") + "</td>");
 		out.println("<td>" + yg.get("sex") + "</td>");
-		out.println("<td>" + yg.get("phone_number") + "</td>");
-		out.println("<td>" + yg.get("type") + "</td>");		
+		out.println("<td>" + yg.get("phone_number") + "</td>");	
 		out.println("</tr>");
 	}
      }
