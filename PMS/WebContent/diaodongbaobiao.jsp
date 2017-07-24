@@ -208,7 +208,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 					<hr>
 				</section>
 
-				<table class="table table-bordered  mb-15">
+				<table class="table table-bordered  mb-15" id="table2">
 					<thead>
 						<tr>
 							<th>编号</th>
@@ -233,7 +233,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 		out.println("<td>" + yg.get("department") + "</td>");
 		out.println("<td>" + yg.get("position") + "</td>");
 		out.println("<td>" + yg.get("transfer_date") + "</td>");
-		out.println("<td>" + yg.get("notes") + "</td>");
+		
 		out.println("</tr>");
 	}
      }
@@ -243,8 +243,16 @@ String username=(String)session.getAttribute("username");// 员工列表
 				
 					<div class="form-group-col-2">	
 							<br>
-							<div style="margin:10px 0px 0px 0px" class="right">
-							<input type="submit" class="btn btn-primary" value="打印报表" style="display: block;" />
+							<div style="margin:10px 0px 0px 0px；width:80px;height:38px;background:#049cdb;" class="right">
+							
+							<div id="export">
+
+			
+
+		<a data-type="xls" href="javascript:;" style="font-size:20px; color:white;">导出excel</a>
+
+		
+	</div>
 						</div>
 				</div>	
 
@@ -268,5 +276,34 @@ String username=(String)session.getAttribute("username");// 员工列表
 		</footer>
 	</div>
 </div>
+<script src="Blob.js"></script>
+
+	<script src="FileSaver.js"></script>
+
+	<script src="tableExport.js"></script>
+
+	<script>
+
+
+
+	var $exportLink = document.getElementById('export');
+
+	$exportLink.addEventListener('click', function(e){
+
+		e.preventDefault();
+
+		if(e.target.nodeName === "A"){
+
+			tableExport('table2', '调动报表', e.target.getAttribute('data-type'));
+
+		}
+
+		
+
+	}, false);
+
+
+
+	</script>
 </body>
 </html>

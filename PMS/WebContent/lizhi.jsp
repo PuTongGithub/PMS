@@ -210,7 +210,7 @@
 		</form>
 
 		</div>
-		 <div style="border:2px solid #d7dde4; height: 400px; width: 100%; margin-top:20px;">
+		 <div style="border:2px solid #d7dde4; height:600px; width: 100%; margin-top:20px;">
          <div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
          查询结果
          </div>
