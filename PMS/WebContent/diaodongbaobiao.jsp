@@ -217,7 +217,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 							<th>部门</th>
 							<th>岗位</th>
 							<th>调动日期</th>
-							<th>调动原因</th>
+							
 							
 						</tr>
 					</thead>

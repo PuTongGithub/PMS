@@ -226,8 +226,7 @@
 							<div class="form-group-col-2">
 								<br>
 								<div style="margin: 10px 0px 0px 770px">
-									<input type="submit" class="btn btn-primary" value="提交"
-										style="display: block;" />
+									 <button class="btn btn-info radius" type="submit"><i class="icon-search"></i>查询</button>
 								</div>
 
 
@@ -240,14 +239,11 @@
 
 	
 			</div>
-			<div class="page-wrap">
+			<div style="border:2px solid #d7dde4; height: 240px; width: 100%; margin-top:60px; background:white;">
 				<!--开始::内容-->
-				<section class="page-hd"> <header>
-				<h4 class="title">查询结果</h4>
-				</header>
-				
-				<hr>
-				</section>
+				<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+    查询条件
+         </div>
 				<div class=" right" style="margin: 5px 5px 10px 5px">
 					<button id="a7" class="btn btn-info right" style="background: #46a546">
 						<i class="icon icon-refreshi"></i>更改试用期状态
