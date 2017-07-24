@@ -243,7 +243,7 @@ String username=(String)session.getAttribute("username");// 员工列表
 				
 					<div class="form-group-col-2">	
 							<br>
-							<div style="margin:10px 0px 0px 0px">
+							<div style="margin:10px 0px 0px 0px" class="right">
 							<input type="submit" class="btn btn-primary" value="打印报表" style="display: block;" />
 						</div>
 				</div>	

@@ -120,7 +120,7 @@
 				</ul>
 			</div>
 			</header>
-			<main class="main-cont content mCustomScrollbar">
+			<main class="main-cont content mCustomScrollbar " style="background:white;">
 			<div class="breadcrumb">
 				<ul>
 					<li><i class="icon-user"></i><a href="#">人员管理</a><i
@@ -128,12 +128,11 @@
 					<li><a href="#" style="color: blue;">试用期管理</a></li>
 				</ul>
 			</div>
-			<div class="page-wrap">
-				<section class="page-hd"> <header>
-				<h4 class="title">查询条件</h4>
-				</header>
-				<hr>
-				</section>
+			<div style="border:2px solid #d7dde4; height: 240px; width: 100%; margin-top:20px; background:white;">
+			
+				<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
+    查询条件
+         </div>
 				<form action="TrialQuery.jsp" method="post">
 					<div class="form-group-col-2">
 
@@ -239,6 +238,7 @@
 
 				<hr>
 
+	
 			</div>
 			<div class="page-wrap">
 				<!--开始::内容-->
