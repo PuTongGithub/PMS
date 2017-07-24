@@ -31,7 +31,7 @@
 		String formal_position = resultSet.getString("position");
 		
 		if(formal_department != current_department || formal_position != current_position){
-		sql = "insert into transfer (name,number,transfer_date,formal_department,formal_position,current_department,current_position)"+
+		sql = "insert into transfer (name,number,transfer_date,former_department,former_position,current_department,current_position)"+
 				     " values "+
 				     "('"+name+"',"+
 	                 "'"+number+"',"+
@@ -40,9 +40,12 @@
 	                 "'"+formal_position+"',"+
 	                 "'"+current_department+"',"+
 	                 "'"+current_position+"')";
+		//out.println(sql);
 		resultNum = statement.executeUpdate(sql);
 		
+		
 		sql = "update employee set department="+"'"+current_department+"'"+",position="+"'"+current_position+"'"+" where number="+"'"+number+"'";
+		//out.println(sql);
 		resultNum += statement.executeUpdate(sql);
 		}
 	}
@@ -58,6 +61,6 @@
 	else{
 		out.println("alert('调动失败！');");
 	}
-	out.println("parent.location.reload();';");
-	out.println("</SCRIPT>");
+	out.println("parent.location.reload();");
+	out.println("</SCRIPT>"); 
 %>
