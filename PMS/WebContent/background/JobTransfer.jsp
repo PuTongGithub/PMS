@@ -24,23 +24,28 @@
 	sql = "select name,department,position from employee where number ="+"'"+number+"'";
 	resultSet = statement.executeQuery(sql);
 	
-	String name = resultSet.getString("name");
-	String formal_department = resultSet.getString("department");
-	String formal_position = resultSet.getString("position");
-	
-	sql = "insert into transfer (name,number,transfer_date,formal_department,formal_position,current_department,current_position)"+
-			     " values "+
-			     "('"+name+"',"+
-                 "'"+number+"',"+
-                 "'"+transfer_date+"',"+
-                 "'"+formal_department+"',"+
-                 "'"+formal_position+"',"+
-                 "'"+current_department+"',"+
-                 "'"+current_position+"')";
-	int resultNum = statement.executeUpdate(sql);
-	
-	sql = "update employee set department="+"'"+current_department+"'"+",position="+"'"+current_position+"'"+" where number="+"'"+number+"'";
-	resultNum = statement.executeUpdate(sql);
+	int resultNum = 0;
+	if(resultSet.next()){
+		String name = resultSet.getString("name");
+		String formal_department = resultSet.getString("department");
+		String formal_position = resultSet.getString("position");
+		
+		if(formal_department != current_department || formal_position != current_position){
+		sql = "insert into transfer (name,number,transfer_date,formal_department,formal_position,current_department,current_position)"+
+				     " values "+
+				     "('"+name+"',"+
+	                 "'"+number+"',"+
+	                 "'"+transfer_date+"',"+
+	                 "'"+formal_department+"',"+
+	                 "'"+formal_position+"',"+
+	                 "'"+current_department+"',"+
+	                 "'"+current_position+"')";
+		resultNum = statement.executeUpdate(sql);
+		
+		sql = "update employee set department="+"'"+current_department+"'"+",position="+"'"+current_position+"'"+" where number="+"'"+number+"'";
+		resultNum += statement.executeUpdate(sql);
+		}
+	}
 
 	resultSet.close(); // 关闭resultSet
 	statement.close(); // 关闭statement
