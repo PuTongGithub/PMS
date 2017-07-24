@@ -23,12 +23,12 @@
 	}
 	
 	String department = new String(request.getParameter("department").getBytes("ISO-8859-1"),"utf-8");
-	if (!number.equals("")) {
+	if (!department.equals("")) {
 		sql += " and employee.department = '" + department + "'";
 	}
 	
 	String position = new String(request.getParameter("position").getBytes("ISO-8859-1"),"utf-8");
-	if (!number.equals("")) {
+	if (!position.equals("")) {
 		sql += " and employee.position = '" + position + "'";
 	}
 

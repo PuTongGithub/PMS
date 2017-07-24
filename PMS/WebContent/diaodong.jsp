@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+	 <%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Hashtable" %>
+
+<% 
+   
+	Vector yglb = (Vector)session.getAttribute("department");
+	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
+	String username=(String)session.getAttribute("username");// 员工列表
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,7 +36,18 @@
 				<p style="font-weight: 700">部门更改为：</p>
 			</div>
 			<div class="right" style="margin-right: 60px;">
-				<input name="department" type="text" class="input3">
+				<select name="department" style="width:auto;">
+        
+										<%
+	for(int i = 0; i < yglb.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb.get(i);
+		out.println("<option>");
+		
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
+									</select>
 			</div>
 		</div>
 
@@ -37,7 +57,18 @@
 				<p style="font-weight: 700">岗位更改为：</p>
 			</div>
 			<div class="right" style="margin-right: 60px;">
-				<input name="position" type="text" class="input3">
+				<select name="department" style="width:auto;">
+        
+										<%
+	for(int i = 0; i < yglb2.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)yglb2.get(i);
+		out.println("<option>");
+		
+		out.println( yg.get("name") );
+		out.println("</option>");
+	}
+%>
+									</select>
 			</div>
 		</div>
 

@@ -3,7 +3,8 @@
     <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Hashtable" %>
 
-<%
+<% 
+    Vector staff=(Vector)request.getAttribute("staff");
 	Vector yglb = (Vector)session.getAttribute("department");
 	Vector yglb2 = (Vector)session.getAttribute("position"); // 员工列表
 	String username=(String)session.getAttribute("username");// 员工列表
@@ -197,43 +198,31 @@
 						<tr>
 							<th>id</th>
 							<th>姓名</th>
-							<th>岗位</th>
 							<th>部门</th>
-							<th>状态</th>
+							<th>岗位</th>						
+							<th>性别</th>
 							<th>联系方式</th>
 							
 							
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="cen">
-							<td>#001</td>
-							<td >赵一</td>
-							<td>职员</td>
-							<td>人事部</td>
-							<td>在职</td>
-							<td>12245345523</td>
-							
-						
-						</tr>
-						<tr class="cen">
-							<td>#002</td>
-							<td >钱二</td>
-							<td>经理</td>
-							<td>财务部</td>
-							<td>在职</td>
-							<td>246334232353</td>
-						
-						</tr>
-						<tr class="cen">
-							<td>#003</td>
-							<td >孙三</td>
-							<td>秘书</td>
-							<td>技术部</td>
-							<td>在职</td>
-							<td>23521234567</td>
-							
-						</tr>
+					<% 
+						if(staff!=null){
+	for(int i = 0; i < staff.size(); i = i + 1) {
+		Hashtable yg = (Hashtable)staff.get(i);
+		out.println("<tr>");
+		out.println("<td>" + yg.get("number") + "</td>");
+		out.println("<td>" + yg.get("name") + "</td>");	
+		out.println("<td>" + yg.get("department") + "</td>");
+		out.println("<td>" + yg.get("position") + "</td>");
+		out.println("<td>" + yg.get("sex") + "</td>");
+		out.println("<td>" + yg.get("phone_number") + "</td>");
+		out.println("<td>" + yg.get("type") + "</td>");		
+		out.println("</tr>");
+	}
+     }
+	%>
 					</tbody>
 				</table>
 				
