@@ -22,7 +22,7 @@
 	String sql;
 	ResultSet resultSet;
 	
-	sql = "select name,entry_date,department,position from employee where number = '"+number+"'";
+	sql = "select name,entry_date,department,position from employee where statu != '离职' and number = '"+number+"'";
 	resultSet = statement.executeQuery(sql);
 	
 	boolean employee_exist=false;
@@ -32,7 +32,6 @@
 		String entry_date = resultSet.getString("entry_date");
 		String department = resultSet.getString("department");
 		String position = resultSet.getString("position");
-		
 		
 		sql = "insert into resign (name,number,begin_date,resign_date,department,position,resign_type)"+
 				     " values "+
