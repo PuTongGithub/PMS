@@ -139,10 +139,11 @@
 			<div style="background: #d7dde4;width: 100%;height: 40px;line-height: 40px;">
     查询条件
          </div>
-			<form action=""  >
+			<form action="StaffQuery.jsp" method="post">
 		<div class="box1 left">
          <p style="font-weight: 700; font-size:15px">部门名称:</p>
          <select name="department" style="width:auto;">
+         <option></option>
 										<%
 	for(int i = 0; i < yglb.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb.get(i);
@@ -156,7 +157,8 @@
          </div>
          <div class="box1 left">
          <p style="font-weight: 700; font-size:15px">岗位名称:</p>
-         <select name="department" style="width:auto;">
+         <select name="position" style="width:auto;">
+         <option></option>
 										<%
 	for(int i = 0; i < yglb2.size(); i = i + 1) {
 		Hashtable yg = (Hashtable)yglb2.get(i);
@@ -171,12 +173,12 @@
          </div>
          <div class="box1 left">
          <p  style="font-weight: 700; font-size:15px">员工编号:</p>
-         <input type="text" class="input1">
+         <input name="number" type="text" class="input1">
 
          </div>
          <div class="box1 left">
          <p  style="font-weight: 700; font-size:15px">员工姓名:</p>
-         <input type="text" class="input1">
+         <input name="name" type="text" class="input1">
          </div>
            <div class="box3 right">
          <button  class="btn btn-info"><i class="icon icon-search"></i>查询</button>

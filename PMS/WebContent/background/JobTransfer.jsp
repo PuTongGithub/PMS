@@ -47,7 +47,12 @@
 	connection.close(); // 关闭connection 
 	
 	out.println("<SCRIPT   LANGUAGE='JavaScript'>");
-	out.println("alert('调动成功！');");
-	out.println("location.href='../diaodong.jsp';");
+	if(resultNum > 0){
+		out.println("alert('调动成功！');");
+	}
+	else{
+		out.println("alert('调动失败！');");
+	}
+	out.println("parent.location.reload();';");
 	out.println("</SCRIPT>");
 %>

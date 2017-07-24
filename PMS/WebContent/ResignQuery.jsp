@@ -31,19 +31,19 @@
 		sql += " and position = '" + position + "'";
 	}
 
-	String begin_date = request.getParameter("begin_date");
+	String begin_date = new String(request.getParameter("begin_date").getBytes("ISO-8859-1"),"utf-8");
 	if (!begin_date.equals("")) {
 		sql += " and resign_date >= '" + begin_date + "'";
 	}
 
-	String end_date = request.getParameter("end_date");
+	String end_date = new String(request.getParameter("end_date").getBytes("ISO-8859-1"),"utf-8");
 	if (!end_date.equals("")) {
 		sql += " and resign_date <= '" + end_date + "'";
 	}
 	
-	String type = request.getParameter("type");
-	if (!end_date.equals("")) {
-		sql += " resign_type = '" + type + "'";
+	String type = new String(request.getParameter("resign_type").getBytes("ISO-8859-1"),"utf-8");
+	if (!type.equals("")) {
+		sql += " and resign_type = '" + type + "'";
 	}
 	
 	out.println(sql);
@@ -74,5 +74,5 @@
 	connection.close(); // 关闭connection 
 	
 	request.getRequestDispatcher("lizhi.jsp").forward(request, response);
-	//response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面 
+	//response.sendRedirect("../shiyongqi.jsp"); // 跳转到试用期管理页面
 %>
