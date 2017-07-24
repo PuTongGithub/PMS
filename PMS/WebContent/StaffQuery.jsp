@@ -10,7 +10,7 @@
 <%
 	String sql = "select employee.name,employee.number,employee.sex,employee.department,employee.position,people.phone_number"+
                  " from employee,people"+
-	             " where employee.number=people.number";
+	             " where employee.number=people.number and employee.statu != '离职'";
 
 	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"utf-8");
 	if (!name.equals("")) {
