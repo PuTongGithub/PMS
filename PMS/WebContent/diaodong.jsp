@@ -37,6 +37,8 @@
 			</div>
 			<div class="right" style="margin-right: 60px;">
 				<select name="department" style="width:auto;">
+				
+				
         
 										<%
 	for(int i = 0; i < yglb.size(); i = i + 1) {
@@ -51,8 +53,15 @@
 			</div>
 		</div>
 
-		<div
-			style="margin-top: 30px; height: 60px; border-bottom: 1px solid black;">
+			<div style="height: 40px; margin-top: 20px;">
+			<div class="left" style="margin-left: 60px;">
+				<p style="font-weight: 700">调动日期：</p>
+			</div>
+			<div class="right " style="margin-right: 60px;">
+				<input name="date" type="date" class="input3">
+			</div>
+		</div>
+		<div style="margin-top: 30px; height: 60px; border-bottom: 1px solid black;">
 			<div class="left" style="margin-left: 60px;">
 				<p style="font-weight: 700">岗位更改为：</p>
 			</div>
@@ -69,7 +78,8 @@
 	}
 %>
 									</select>
-			</div>
+			
+		</div>
 		</div>
 
 		<div class="box3 right">
