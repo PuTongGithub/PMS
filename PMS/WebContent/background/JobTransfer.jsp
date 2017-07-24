@@ -21,7 +21,7 @@
 	String sql;
 	ResultSet resultSet;
 	
-	sql = "select name,department,position from employee where number ="+"'"+number+"'";
+	sql = "select name,department,position from employee where statu != '离职' and number = '"+number+"'";
 	resultSet = statement.executeQuery(sql);
 	
 	int resultNum = 0;
